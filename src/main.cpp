@@ -6,17 +6,12 @@
 #include <cmath>
 
 #include "cPatrolZone.h"
+#include "cGUI.h"
 
 
 int main()
 {
-    cPatrolZone Z;
-
-    Z.GenerateCrimeRandom(100, 0, 100, 0, 100);
-
-    Z.AHC(10);
-
-    Z.textDisplay();
+    cGUI gui;
 
     return 0;
 }

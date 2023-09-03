@@ -11,15 +11,19 @@ public:
     but for now we will just use Pythagorus
 
     */
-    float Distance(const cCrime &other)
-    {
-        return sqrt((myX - other.myX) * (myX - other.myX) + (myY - other.myY) * (myY - other.myY));
-    }
-    std::string Text()
+    float Distance(const cCrime &other);
+
+    std::string Text() const
     {
         std::stringstream ss;
         ss << myX << " " << myY;
         return ss.str();
+    }
+
+    void getLocation(int& x, int& y ) const
+        {
+            x = myX;
+            y = myY;
     }
 
 private:
@@ -56,6 +60,8 @@ public:
         return maxlinklength;
     }
 
+    void getLocation( int& x, int& y ) const;
+
     void Combine(cCluster &other)
     {
         for (auto &c : other)
@@ -68,6 +74,10 @@ public:
     void Delete()
     {
         myIndex = -1;
+    }
+    bool isDeleted() const
+    {
+        return ( myIndex < 0 );
     }
 
     std::vector<cCrime>::iterator begin()
@@ -124,6 +134,15 @@ public:
     AHC(int number);
 
     void textDisplay();
+
+    const std::vector<cCrime>& getCrime() const
+    {
+        return myVCrime;
+    }
+    const std::vector<cCluster>& getCluster() const
+    {
+        return myVCluster;
+    }
 
 private:
     std::vector<cCrime> myVCrime;

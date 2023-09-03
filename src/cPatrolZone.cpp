@@ -69,6 +69,26 @@ void cPatrolZone::AHC(int number)
     }
 }
 
+float cCrime::Distance(const cCrime &other)
+{
+    return sqrt((myX - other.myX) * (myX - other.myX) + (myY - other.myY) * (myY - other.myY));
+}
+
+void cCluster::getLocation(int &x, int &y) const
+{
+    x = 0;
+    y = 0;
+    for( auto& c : myCrime )
+    {
+        int cx, cy;
+        c.getLocation(cx,cy);
+        x += cx;
+        y += cy;
+    }
+    x /= myCrime.size();
+    y /= myCrime.size();
+}
+
 void cPatrolZone::textDisplay()
 {
     std::cout << "Crime Locations:\n";

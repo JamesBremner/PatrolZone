@@ -21,7 +21,8 @@ CCflags = -std=c++17 $(OPT) -D_mingw_
 # sources
 OBJ_starter = \
 	$(ODIR)/main.o \
-	$(ODIR)/cPatrolZone.o
+	$(ODIR)/cPatrolZone.o \
+	$(ODIR)/cGUI.o \
 
 ### COMPILE
 
