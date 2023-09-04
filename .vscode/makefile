@@ -1,5 +1,5 @@
 #source file search paths
-VPATH = ./src 
+VPATH = ./src ../raven-set
 
 	# compiler include search paths
 INCS = -I./include \
@@ -23,10 +23,11 @@ OBJ_starter = \
 	$(ODIR)/main.o \
 	$(ODIR)/cPatrolZone.o \
 	$(ODIR)/cGUI.o \
+	$(ODIR)/cxy.o \
 
 ### COMPILE
 
-$(ODIR)/%.o: %.cpp  
+$(ODIR)/%.o: %.cpp cPatrolZone.h
 	g++  $(CCflags) \
 	-c -o $@ $< $(INCS)
 

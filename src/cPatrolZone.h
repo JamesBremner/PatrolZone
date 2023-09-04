@@ -1,3 +1,5 @@
+#include "cxy.h"
+
 class cCrime
 {
 public:
@@ -60,7 +62,7 @@ public:
         return maxlinklength;
     }
 
-    void getLocation( int& x, int& y ) const;
+
 
     void Combine(cCluster &other)
     {
@@ -89,7 +91,7 @@ public:
         return myCrime.end();
     }
 
-    std::string Text()
+    std::string Text() const
     {
         std::stringstream ss;
         if (myIndex != -1)
@@ -105,11 +107,57 @@ public:
         return ss.str();
     }
 
+    void setRoadLocation( const cxy& p )
+    {
+        myRoadLocation = p;
+    }
+    cxy getRoadLocation() const
+    {
+        return myRoadLocation;
+    }
+
+    void getLocation( int& x, int& y ) const;
+
     int myIndex;
 
 private:
     static int NextIndex;
     std::vector<cCrime> myCrime;
+    cxy myRoadLocation;
+};
+
+class cRoad
+{
+    public:
+    std::vector<cxy> myVNode;
+    enum class eHighway
+    {
+        none,
+        tertiary,
+        residential,
+    };
+    eHighway myImportance;
+
+    cRoad()
+    : myImportance(eHighway::none)
+    {}
+    cRoad(
+        const cxy& end1,
+        const cxy& end2,
+        eHighway importance    )
+        : myImportance( importance)
+        {
+            myVNode.push_back(end1);
+            myVNode.push_back(end2);
+        }
+    cxy end1() const
+    {
+        return myVNode[0];
+    }
+    cxy end2() const
+    {
+        return myVNode.back();
+    }
 };
 
 class cPatrolZone
@@ -120,18 +168,25 @@ public:
         @param[in] minx ... maxy  extent of locations
     */
     void
-    GenerateCrimeRandom(
+    generateCrimeRandom(
         int number, // number to generate
         int minx,
         int maxx,
         int miny,
         int maxy);
 
+    void
+    generateRoad();
+
+
     /** agglomerative hierarchical clustering
         @param[in] number of clusters required
     */
     void
     AHC(int number);
+
+    void
+    move2Road();
 
     void textDisplay();
 
@@ -143,8 +198,13 @@ public:
     {
         return myVCluster;
     }
+    const std::vector<cRoad>& getRoad() const
+    {
+        return myVRoad;
+    }
 
 private:
     std::vector<cCrime> myVCrime;
     std::vector<cCluster> myVCluster;
+    std::vector<cRoad> myVRoad;
 };

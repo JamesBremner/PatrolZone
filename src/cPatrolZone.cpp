@@ -14,7 +14,7 @@ bool operator==(const cCluster &lhs, const cCluster &rhs)
     return (lhs.myIndex == rhs.myIndex);
 }
 
-void cPatrolZone::GenerateCrimeRandom(
+void cPatrolZone::generateCrimeRandom(
     int number, // number to generate
     int minx,
     int maxx,
@@ -26,6 +26,19 @@ void cPatrolZone::GenerateCrimeRandom(
     for (int k = 0; k < number; k++)
     {
         myVCrime.push_back(cCrime(rand() % maxx + minx, rand() % maxy + miny));
+    }
+}
+
+void cPatrolZone::generateRoad()
+{
+    myVRoad.clear();
+    for( int k = 0; k < 10; k++ )
+    {
+        myVRoad.push_back(
+            cRoad(cxy(k*10,0),cxy(k*10,100),cRoad::eHighway::tertiary));
+        myVRoad.push_back(
+            cRoad(cxy(0,k*10),cxy(100,k*10),cRoad::eHighway::tertiary));
+        
     }
 }
 
@@ -68,6 +81,37 @@ void cPatrolZone::AHC(int number)
         closest.first->Combine(*closest.second);
     }
 }
+
+    void cPatrolZone::move2Road()
+    {
+        for( auto& c : myVCluster )
+        {
+            int x,y;
+             c.getLocation(
+                x,
+                y            );
+            cxy cluster_location(x,y);
+
+            // find nearest road
+            double bestDistance = INT_MAX;
+            cRoad bestRoad;
+            for( auto& r : myVRoad )
+            {
+                auto d = cluster_location.dis2toline(
+                    r.myVNode[0],
+                    r.myVNode.back() );
+                if( d < bestDistance ) {
+                    bestDistance = d;
+                    bestRoad = r;
+                }
+            }
+            // center the patrol on the road
+            c.setRoadLocation( cluster_location.closest(
+                 bestRoad.myVNode[0],
+                 bestRoad.myVNode.back() ) );
+
+        }
+    }
 
 float cCrime::Distance(const cCrime &other)
 {
