@@ -6,6 +6,7 @@
 #include <cmath>
 
 #include "cPatrolZone.h"
+#include "cOSM.h"
 #include "cGUI.h"
 
 

@@ -70,6 +70,7 @@ public:
 
 private:
     cPatrolZone myZ;
+    cOSM myOSM;
 
     void draw(wex::shapes& S);
 };

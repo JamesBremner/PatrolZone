@@ -23,6 +23,7 @@ OBJ_starter = \
 	$(ODIR)/main.o \
 	$(ODIR)/cPatrolZone.o \
 	$(ODIR)/cGUI.o \
+	$(ODIR)/cOSM.o \
 	$(ODIR)/cxy.o \
 
 ### COMPILE

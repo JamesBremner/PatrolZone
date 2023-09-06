@@ -1,3 +1,7 @@
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
 #include "cxy.h"
 
 class cCrime

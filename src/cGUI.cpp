@@ -2,6 +2,7 @@
 #include <sstream>
 #include <vector>
 #include "cPatrolZone.h"
+#include "cOSM.h"
 #include "cGUI.h"
 
 cGUI::cGUI()
@@ -9,6 +10,9 @@ cGUI::cGUI()
           "Patrol Zone",
           {50, 50, 1000, 500})
 {
+    myOSM.set(-45,20000,75,20000);
+    myOSM.read("../dat/node.txt");
+
     myZ.generateCrimeRandom(100, 0, 100, 0, 100);
     myZ.generateRoad();
 
@@ -34,12 +38,16 @@ void cGUI::draw(wex::shapes &S)
     S.penThick(2);
 
     S.color(0);
-    for (auto &r : myZ.getRoad())
+    // for (auto &r : myZ.getRoad())
+    // {
+    //     cxy e1 = r.end1();
+    //     cxy e2 = r.end2();
+    //     S.line({off + scale * e1.x, off + scale * e1.y,
+    //             off + scale * e2.x, off + scale * e2.y});
+    // }
+    for( const auto& p : myOSM.getNodes())
     {
-        cxy e1 = r.end1();
-        cxy e2 = r.end2();
-        S.line({off + scale * e1.x, off + scale * e1.y,
-                off + scale * e2.x, off + scale * e2.y});
+        S.pixel( p.x, p.y);
     }
 
     S.color(0x0000FF);
