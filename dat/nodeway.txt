@@ -1,0 +1,3573 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.61.5 4133829e",
+  "osm3s": {
+    "timestamp_osm_base": "2023-09-07T16:49:54Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 76419641,
+  "nodes": [
+    901061530,
+    3104898034,
+    6392138512,
+    6392138508,
+    3104898142,
+    901050668
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "Murray Street",
+    "name:en": "Murray Street",
+    "name:fr": "rue Murray",
+    "oneway": "yes",
+    "ref": "44",
+    "sidewalk": "both",
+    "source": "CanVec 6.0 - NRCan",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76419809,
+  "nodes": [
+    4836884205,
+    5600998625,
+    5600998632,
+    901059890,
+    5600998628,
+    5600998626,
+    7450085297,
+    7450085308,
+    5791262562
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "lcn": "yes",
+    "maxspeed": "30",
+    "name": "St. Andrew Street",
+    "name:en": "St. Andrew Street",
+    "name:fr": "rue St. Andrew",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76419877,
+  "nodes": [
+    901049607,
+    6361656291,
+    2389892354,
+    2389892345,
+    7787781477,
+    2600608478
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Bruyère Street",
+    "name:en": "Bruyère Street",
+    "name:fr": "rue Bruyère",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76420004,
+  "nodes": [
+    901055609,
+    8489899995,
+    5791288485,
+    1417117546,
+    5791288483,
+    901052134,
+    901053743,
+    1417117560,
+    6820841010,
+    1417117501,
+    5600998592,
+    901065123
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "source": "CanVec 6.0 - NRCan",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76420047,
+  "nodes": [
+    901051953,
+    6371322643,
+    901057421
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Parent Avenue",
+    "name:en": "Parent Avenue",
+    "name:fr": "avenue Parent",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76420471,
+  "nodes": [
+    901046308,
+    6361656312,
+    7787781460,
+    7787781217,
+    7787781211,
+    901045824,
+    7327045487,
+    5293924885,
+    1417639617,
+    6632655670,
+    5293924876,
+    5600998616,
+    6361656308,
+    901057880,
+    6371322545,
+    5933561406,
+    5844121489,
+    5844121491,
+    824676509,
+    6371322540,
+    6371322539,
+    901051120
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "maxspeed": "30",
+    "name": "Cathcart Street",
+    "name:en": "Cathcart Street",
+    "name:fr": "rue Cathcart",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76420491,
+  "nodes": [
+    1034339475,
+    7787781228,
+    901053240,
+    5293924887,
+    1417635051,
+    1417639637,
+    5293924889,
+    6958038655,
+    5600998607,
+    901047359,
+    5600998611,
+    1417645480,
+    901055521,
+    6958080387,
+    901057476,
+    6639122770,
+    901058159,
+    4584544306,
+    824670027,
+    2262722201
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Bolton Street",
+    "name:en": "Bolton Street",
+    "name:fr": "rue Bolton",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76420707,
+  "nodes": [
+    901065123,
+    901048525,
+    901060739,
+    1417117512,
+    1034342905,
+    6820738433,
+    1417117552,
+    1417117595,
+    901062704,
+    901046289
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "50",
+    "name": "Boteler Street",
+    "name:en": "Boteler Street",
+    "name:fr": "rue Boteler",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76420739,
+  "nodes": [
+    901052287,
+    1417117562,
+    901052930,
+    8489900000,
+    8651890662,
+    5600998597,
+    901064498
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76420767,
+  "nodes": [
+    901050668,
+    3104898143,
+    6392138504,
+    6813090407,
+    7375871597,
+    6392138501,
+    7375871585,
+    5600998667,
+    901048235,
+    5600998663,
+    5791262544
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "Murray Street",
+    "name:en": "Murray Street",
+    "name:fr": "rue Murray",
+    "oneway": "yes",
+    "ref": "44",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76420817,
+  "nodes": [
+    2608859935,
+    3686374592,
+    901052287
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "source": "CanVec 6.0 - NRCan",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76420853,
+  "nodes": [
+    901052605,
+    3104897132,
+    7787781321,
+    901062633,
+    4597734878,
+    901063403,
+    901059021,
+    901064957,
+    1416749986,
+    8652944426,
+    901060801
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "source": "CanVec 6.0 - NRCan",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76420971,
+  "nodes": [
+    901060801,
+    8652944425,
+    1416749973,
+    901047458,
+    901046424,
+    2396555089,
+    901058280,
+    1416749839,
+    5791288486,
+    1416749979
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "source": "CanVec 6.0 - NRCan",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76421036,
+  "nodes": [
+    1417117544,
+    5600998596,
+    1417117550,
+    1417117594,
+    1417117510,
+    901063683
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "source": "CanVec 6.0 - NRCan",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76421392,
+  "nodes": [
+    901045824,
+    6361656310,
+    3686375335,
+    7787781197,
+    3686375336,
+    6361656290,
+    901053240,
+    6361656289,
+    3686375338,
+    1417638489,
+    2537077619,
+    6361656184,
+    901063108
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Gilberte-Paquette Avenue",
+    "name:en": "Gilberte-Paquette Avenue",
+    "name:fr": "avenue Gilberte-Paquette",
+    "old_name": "Parent Avenue",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76422401,
+  "nodes": [
+    901045399,
+    1655122340,
+    1655123040,
+    1655122378,
+    1655123007
+  ],
+  "tags": {
+    "highway": "primary_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "sidewalk": "no",
+    "source": "Bing",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76422432,
+  "nodes": [
+    901055184,
+    1417117500,
+    1417645485,
+    6958038667,
+    6958038661,
+    901057703,
+    7787781555,
+    901046924
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Boteler Street",
+    "name:en": "Boteler Street",
+    "name:fr": "rue Boteler",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76422535,
+  "nodes": [
+    901046289,
+    901063214,
+    8489899993,
+    1034342908,
+    5791288484,
+    901055637,
+    8489899991,
+    5600998594,
+    1417117544
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "50",
+    "name": "Boteler Street",
+    "name:en": "Boteler Street",
+    "name:fr": "rue Boteler",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76422577,
+  "nodes": [
+    901058793,
+    6371322520,
+    5791262545,
+    3783522399,
+    1524717010,
+    6371322590,
+    901053778,
+    6371322588,
+    5791262546,
+    5296327609,
+    1655122754,
+    901213388,
+    901205910,
+    901210475
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Bruyère Street",
+    "name:en": "Bruyère Street",
+    "name:fr": "rue Bruyère",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76422619,
+  "nodes": [
+    901051550,
+    5610565436,
+    7283468649,
+    3104897131,
+    901052605
+  ],
+  "tags": {
+    "cycleway": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "St. Patrick Street",
+    "name:en": "St. Patrick Street",
+    "name:fr": "rue St. Patrick",
+    "oneway": "yes",
+    "ref": "44",
+    "sidewalk": "both",
+    "source": "CanVec 6.0 - NRCan",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76422925,
+  "nodes": [
+    901051953,
+    6371322641,
+    6371322173,
+    6371322174,
+    901061905
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "maxspeed": "30",
+    "name": "Guigues Avenue",
+    "name:en": "Guigues Avenue",
+    "name:fr": "avenue Guigues",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76422970,
+  "nodes": [
+    901060801,
+    3686377543,
+    903980529
+  ],
+  "tags": {
+    "cycleway": "lane",
+    "highway": "secondary",
+    "lanes": "4",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76423272,
+  "nodes": [
+    824659059,
+    6371322534,
+    5791262555,
+    6371322531,
+    6371322532,
+    824670027
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Cathcart Square",
+    "name:en": "Cathcart Square",
+    "name:fr": "carré Cathcart",
+    "sidewalk": "right",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76423347,
+  "nodes": [
+    1263694673,
+    2262722194,
+    2262722199,
+    2262722219,
+    901065928,
+    2262722213,
+    901045875,
+    901064555,
+    1263694649,
+    901047240
+  ],
+  "tags": {
+    "highway": "primary",
+    "lanes": "1",
+    "maxspeed": "50",
+    "name": "King Edward Avenue",
+    "name:en": "King Edward Avenue",
+    "name:fr": "avenue King Edward",
+    "oneway": "yes",
+    "ref": "99",
+    "sidewalk": "right",
+    "source": "Bing",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76423420,
+  "nodes": [
+    901057421,
+    7787781489,
+    7787781263,
+    9933332207
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Parent Avenue",
+    "name:en": "Parent Avenue",
+    "name:fr": "avenue Parent",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76423503,
+  "nodes": [
+    901059021,
+    6361656301,
+    901054490,
+    7787781308,
+    7787781294,
+    7787781274,
+    7787781252,
+    6371322646,
+    6371322645,
+    901057421
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "lcn": "yes",
+    "maxspeed": "30",
+    "name": "St. Andrew Street",
+    "name:en": "St. Andrew Street",
+    "name:fr": "rue St. Andrew",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76423689,
+  "nodes": [
+    901062633,
+    6361656299,
+    7787781326,
+    6371322644,
+    901051953
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "maxspeed": "30",
+    "name": "Guigues Avenue",
+    "name:en": "Guigues Avenue",
+    "name:fr": "avenue Guigues",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76424100,
+  "nodes": [
+    901064870,
+    6689997839,
+    5600998605,
+    901055184
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "50",
+    "name": "Boteler Street",
+    "name:en": "Boteler Street",
+    "name:fr": "rue Boteler",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76424341,
+  "nodes": [
+    901045677,
+    5600998623,
+    2389892777,
+    7327045519,
+    9933332208,
+    6361656293,
+    901049607
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "maxspeed": "30",
+    "name": "Bruyère Street",
+    "name:en": "Bruyère Street",
+    "name:fr": "rue Bruyère",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76424462,
+  "nodes": [
+    901059649,
+    3686377313,
+    7283468678,
+    5610565432,
+    901051550
+  ],
+  "tags": {
+    "cycleway": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "St. Patrick Street",
+    "name:en": "St. Patrick Street",
+    "name:fr": "rue St. Patrick",
+    "oneway": "yes",
+    "ref": "44",
+    "sidewalk": "both",
+    "source": "CanVec 6.0 - NRCan",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76424496,
+  "nodes": [
+    901046289,
+    1417643952,
+    901063108,
+    1417638495,
+    1417643934,
+    1417635050,
+    1417639602,
+    6820738432,
+    1417609942,
+    6958080404,
+    901064870
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "Boteler Street",
+    "name:en": "Boteler Street",
+    "name:fr": "rue Boteler",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 128191522,
+  "nodes": [
+    901055184,
+    5600998603,
+    6689997840,
+    1417117537,
+    5600998613,
+    901047359,
+    5600998609,
+    901057880,
+    5600998617,
+    901045677,
+    5600998621,
+    6820738431,
+    901059890,
+    5600998630,
+    901061905,
+    7283468892,
+    3686377315,
+    901059649
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "name": "Dalhousie Street",
+    "name:en": "Dalhousie Street",
+    "name:fr": "rue Dalhousie",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 128476367,
+  "nodes": [
+    901061809,
+    3262751844,
+    7787781549,
+    7132405067,
+    5600998655,
+    901065732
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "St. Patrick Street",
+    "name:en": "St. Patrick Street",
+    "name:fr": "rue St. Patrick",
+    "oneway": "yes",
+    "ref": "44",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 216953623,
+  "nodes": [
+    901064660,
+    901051093,
+    2262719562,
+    2262719554,
+    2262736516,
+    901047240
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "maxspeed": "30",
+    "name": "Cathcart Street",
+    "name:en": "Cathcart Street",
+    "name:fr": "rue Cathcart",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 216953624,
+  "nodes": [
+    901047240,
+    2262719565
+  ],
+  "tags": {
+    "highway": "primary",
+    "lanes": "1",
+    "name": "King Edward Avenue",
+    "name:en": "King Edward Avenue",
+    "name:fr": "avenue King Edward",
+    "oneway": "yes",
+    "ref": "99",
+    "sidewalk": "right",
+    "source": "Bing",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 254269720,
+  "nodes": [
+    2600608478,
+    1420516166,
+    903980529
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Bruyère Street",
+    "name:en": "Bruyère Street",
+    "name:fr": "rue Bruyère",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt",
+    "turn:lanes": "left|right"
+  }
+},
+{
+  "type": "way",
+  "id": 301054181,
+  "nodes": [
+    2280814798,
+    2280814794,
+    5791262565,
+    6371322177,
+    901061749,
+    6371322178,
+    5791262566,
+    7787781529,
+    7450044732,
+    7450044729,
+    7450044731,
+    6371322172,
+    901061905
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Guigues Avenue",
+    "name:en": "Guigues Avenue",
+    "name:fr": "avenue Guigues",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 397105989,
+  "nodes": [
+    901045399,
+    1655123213,
+    901058793,
+    901062083,
+    901051659,
+    2262722205
+  ],
+  "tags": {
+    "NHS": "yes",
+    "highway": "primary",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "40",
+    "name": "King Edward Avenue",
+    "name:en": "King Edward Avenue",
+    "name:fr": "avenue King Edward",
+    "oneway": "yes",
+    "ref": "99",
+    "sidewalk": "right",
+    "source": "Bing",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 434331314,
+  "nodes": [
+    2262719565,
+    3783522396,
+    7132405069,
+    1655123300
+  ],
+  "tags": {
+    "NHS": "yes",
+    "highway": "primary",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "40",
+    "name": "King Edward Avenue",
+    "name:en": "King Edward Avenue",
+    "name:fr": "avenue King Edward",
+    "oneway": "yes",
+    "ref": "99",
+    "sidewalk": "right",
+    "source": "Bing",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 434331328,
+  "nodes": [
+    1655123300,
+    5157117971,
+    6056416609,
+    1655123007
+  ],
+  "tags": {
+    "NHS": "yes",
+    "highway": "primary",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "40",
+    "name": "King Edward Avenue",
+    "name:en": "King Edward Avenue",
+    "name:fr": "avenue King Edward",
+    "oneway": "yes",
+    "ref": "99",
+    "sidewalk": "right",
+    "source": "Bing",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 457916436,
+  "nodes": [
+    901065123,
+    1417117544
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "oneway": "yes",
+    "source": "CanVec 6.0 - NRCan",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 457916437,
+  "nodes": [
+    1417117544,
+    901064498
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "50",
+    "name": "Boteler Street",
+    "name:en": "Boteler Street",
+    "name:fr": "rue Boteler",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 457916438,
+  "nodes": [
+    901063683,
+    901060675,
+    1417117487,
+    1417117574,
+    7787781556,
+    901047986,
+    1417609943,
+    5519390894,
+    901066100
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "source": "CanVec 6.0 - NRCan",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 457916439,
+  "nodes": [
+    901064498,
+    901065123
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "50",
+    "name": "Boteler Street",
+    "name:en": "Boteler Street",
+    "name:fr": "rue Boteler",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 467470142,
+  "nodes": [
+    901065732,
+    5600998659,
+    6812497745,
+    7283468917,
+    7787781545,
+    7283468684,
+    7283468904,
+    7283468612,
+    3686377314,
+    901059649
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "St. Patrick Street",
+    "name:en": "St. Patrick Street",
+    "name:fr": "rue St. Patrick",
+    "oneway": "yes",
+    "ref": "44",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 491610754,
+  "nodes": [
+    4836884205,
+    6371322647,
+    6371322648,
+    901057421
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "lcn": "yes",
+    "maxspeed": "30",
+    "name": "St. Andrew Street",
+    "name:en": "St. Andrew Street",
+    "name:fr": "rue St. Andrew",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 520045235,
+  "nodes": [
+    903980529,
+    3686377544,
+    6820841011,
+    901046308,
+    8489900003,
+    8651890676,
+    901051433,
+    5791288482,
+    901055609
+  ],
+  "tags": {
+    "cycleway": "lane",
+    "highway": "secondary",
+    "lanes": "4",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 520045236,
+  "nodes": [
+    901064498,
+    5600998591,
+    8489900001,
+    901046547,
+    1417117503,
+    8489899994,
+    1417117570,
+    3783522373,
+    8489899996,
+    901055609
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Sussex Drive",
+    "name:en": "Sussex Drive",
+    "name:fr": "promenade Sussex",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 586139310,
+  "nodes": [
+    901063214,
+    1417117496,
+    1417117542,
+    5600998589,
+    5600998587,
+    5600998584,
+    5600998586,
+    5600998585,
+    1417117550
+  ],
+  "tags": {
+    "highway": "secondary_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 586139321,
+  "nodes": [
+    901066372,
+    6371322650,
+    5791262561,
+    901047237
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Bruyère Street",
+    "name:en": "Bruyère Street",
+    "name:fr": "rue Bruyère",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 586139322,
+  "nodes": [
+    901045677,
+    5600998619,
+    7787781370,
+    5844121493,
+    5844121495,
+    6639391287,
+    2396329479
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Bruyère Street",
+    "name:en": "Bruyère Street",
+    "name:fr": "rue Bruyère",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 611697827,
+  "nodes": [
+    5791143888,
+    6813090408,
+    3686377592,
+    901063288,
+    3686377595,
+    3104898141,
+    901050668
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "name": "Dalhousie Street",
+    "name:en": "Dalhousie Street",
+    "name:fr": "rue Dalhousie",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 611713891,
+  "nodes": [
+    5791262562,
+    5791262564,
+    6371322176,
+    901054868
+  ],
+  "tags": {
+    "cycleway:left": "opposite_lane",
+    "highway": "residential",
+    "lanes": "1",
+    "lcn": "yes",
+    "maxspeed": "30",
+    "name": "St. Andrew Street",
+    "name:en": "St. Andrew Street",
+    "name:fr": "rue St. Andrew",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 611713892,
+  "nodes": [
+    901054868,
+    6371322175,
+    5791262563,
+    7787781517,
+    7787781377,
+    7787781513,
+    901051574,
+    1655123254
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "lcn": "yes",
+    "maxspeed": "30",
+    "name": "St. Andrew Street",
+    "name:en": "St. Andrew Street",
+    "name:fr": "rue St. Andrew",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 628707587,
+  "nodes": [
+    901050668,
+    3104898144,
+    6812497744,
+    7283468886,
+    3686377312,
+    901059649
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "name": "Dalhousie Street",
+    "name:en": "Dalhousie Street",
+    "name:fr": "rue Dalhousie",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1083968028,
+  "nodes": [
+    9933332207,
+    901065305,
+    6361656292,
+    901049607
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "maxspeed": "30",
+    "name": "Parent Avenue",
+    "name:en": "Parent Avenue",
+    "name:fr": "avenue Parent",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1160741970,
+  "nodes": [
+    824659059,
+    901064660
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "maxspeed": "30",
+    "name": "Cathcart Street",
+    "name:en": "Cathcart Street",
+    "name:fr": "rue Cathcart",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1160741971,
+  "nodes": [
+    901051120,
+    6371322541,
+    824659059
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "maxspeed": "30",
+    "name": "Cathcart Street",
+    "name:en": "Cathcart Street",
+    "name:fr": "rue Cathcart",
+    "oneway": "no",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "node",
+  "id": 901045677,
+  "lat": 45.4327644,
+  "lon": -75.6944465
+},
+{
+  "type": "node",
+  "id": 901045824,
+  "lat": 45.4327556,
+  "lon": -75.6968540
+},
+{
+  "type": "node",
+  "id": 901046308,
+  "lat": 45.4319460,
+  "lon": -75.6988560
+},
+{
+  "type": "node",
+  "id": 901046424,
+  "lat": 45.4303850,
+  "lon": -75.6976378
+},
+{
+  "type": "node",
+  "id": 901047458,
+  "lat": 45.4305087,
+  "lon": -75.6977381
+},
+{
+  "type": "node",
+  "id": 901049607,
+  "lat": 45.4319992,
+  "lon": -75.6962108
+},
+{
+  "type": "node",
+  "id": 901051433,
+  "lat": 45.4323236,
+  "lon": -75.6991444
+},
+{
+  "type": "node",
+  "id": 901051550,
+  "lat": 45.4301171,
+  "lon": -75.6945871
+},
+{
+  "type": "node",
+  "id": 901051953,
+  "lat": 45.4307548,
+  "lon": -75.6951443
+},
+{
+  "type": "node",
+  "id": 901052605,
+  "lat": 45.4292748,
+  "lon": -75.6965578
+},
+{
+  "type": "node",
+  "id": 901054490,
+  "lat": 45.4305656,
+  "lon": -75.6974960
+},
+{
+  "type": "node",
+  "id": 901055609,
+  "lat": 45.4325029,
+  "lon": -75.6992193
+},
+{
+  "type": "node",
+  "id": 901057421,
+  "lat": 45.4313743,
+  "lon": -75.6956667
+},
+{
+  "type": "node",
+  "id": 901058280,
+  "lat": 45.4296412,
+  "lon": -75.6970187
+},
+{
+  "type": "node",
+  "id": 901059021,
+  "lat": 45.4305228,
+  "lon": -75.6975971
+},
+{
+  "type": "node",
+  "id": 901060801,
+  "lat": 45.4309564,
+  "lon": -75.6980014
+},
+{
+  "type": "node",
+  "id": 901062633,
+  "lat": 45.4299067,
+  "lon": -75.6970897
+},
+{
+  "type": "node",
+  "id": 901063403,
+  "lat": 45.4304307,
+  "lon": -75.6975233
+},
+{
+  "type": "node",
+  "id": 901064957,
+  "lat": 45.4305986,
+  "lon": -75.6976585
+},
+{
+  "type": "node",
+  "id": 901065305,
+  "lat": 45.4319233,
+  "lon": -75.6961503
+},
+{
+  "type": "node",
+  "id": 903980529,
+  "lat": 45.4311504,
+  "lon": -75.6981689
+},
+{
+  "type": "node",
+  "id": 1034339475,
+  "lat": 45.4327156,
+  "lon": -75.6990590
+},
+{
+  "type": "node",
+  "id": 1416749839,
+  "lat": 45.4295081,
+  "lon": -75.6969061
+},
+{
+  "type": "node",
+  "id": 1416749973,
+  "lat": 45.4306771,
+  "lon": -75.6978665
+},
+{
+  "type": "node",
+  "id": 1416749979,
+  "lat": 45.4293988,
+  "lon": -75.6968506
+},
+{
+  "type": "node",
+  "id": 1416749986,
+  "lat": 45.4307199,
+  "lon": -75.6977579
+},
+{
+  "type": "node",
+  "id": 1417117546,
+  "lat": 45.4328327,
+  "lon": -75.6992385
+},
+{
+  "type": "node",
+  "id": 1417117570,
+  "lat": 45.4328206,
+  "lon": -75.6993601
+},
+{
+  "type": "node",
+  "id": 1420516166,
+  "lat": 45.4312010,
+  "lon": -75.6980182
+},
+{
+  "type": "node",
+  "id": 2389892345,
+  "lat": 45.4316368,
+  "lon": -75.6970323
+},
+{
+  "type": "node",
+  "id": 2389892354,
+  "lat": 45.4318246,
+  "lon": -75.6966091
+},
+{
+  "type": "node",
+  "id": 2389892777,
+  "lat": 45.4323346,
+  "lon": -75.6954448
+},
+{
+  "type": "node",
+  "id": 2396555089,
+  "lat": 45.4298423,
+  "lon": -75.6971885
+},
+{
+  "type": "node",
+  "id": 2600608478,
+  "lat": 45.4314029,
+  "lon": -75.6975541
+},
+{
+  "type": "node",
+  "id": 3104897131,
+  "lat": 45.4293107,
+  "lon": -75.6964774
+},
+{
+  "type": "node",
+  "id": 3104897132,
+  "lat": 45.4293354,
+  "lon": -75.6966098
+},
+{
+  "type": "node",
+  "id": 3686375335,
+  "lat": 45.4328364,
+  "lon": -75.6969223
+},
+{
+  "type": "node",
+  "id": 3686377543,
+  "lat": 45.4310692,
+  "lon": -75.6980988
+},
+{
+  "type": "node",
+  "id": 3686377544,
+  "lat": 45.4312136,
+  "lon": -75.6982235
+},
+{
+  "type": "node",
+  "id": 3783522373,
+  "lat": 45.4326969,
+  "lon": -75.6993368
+},
+{
+  "type": "node",
+  "id": 4597734878,
+  "lat": 45.4302761,
+  "lon": -75.6973948
+},
+{
+  "type": "node",
+  "id": 4836884205,
+  "lat": 45.4315162,
+  "lon": -75.6953462
+},
+{
+  "type": "node",
+  "id": 5600998617,
+  "lat": 45.4328168,
+  "lon": -75.6944931
+},
+{
+  "type": "node",
+  "id": 5600998619,
+  "lat": 45.4328076,
+  "lon": -75.6943442
+},
+{
+  "type": "node",
+  "id": 5600998621,
+  "lat": 45.4326940,
+  "lon": -75.6943901
+},
+{
+  "type": "node",
+  "id": 5600998623,
+  "lat": 45.4327160,
+  "lon": -75.6945518
+},
+{
+  "type": "node",
+  "id": 5610565432,
+  "lat": 45.4301462,
+  "lon": -75.6944958
+},
+{
+  "type": "node",
+  "id": 5610565436,
+  "lat": 45.4300888,
+  "lon": -75.6946679
+},
+{
+  "type": "node",
+  "id": 5791288482,
+  "lat": 45.4324337,
+  "lon": -75.6991951
+},
+{
+  "type": "node",
+  "id": 5791288485,
+  "lat": 45.4327103,
+  "lon": -75.6992193
+},
+{
+  "type": "node",
+  "id": 5791288486,
+  "lat": 45.4294460,
+  "lon": -75.6968661
+},
+{
+  "type": "node",
+  "id": 6361656291,
+  "lat": 45.4319490,
+  "lon": -75.6963252
+},
+{
+  "type": "node",
+  "id": 6361656292,
+  "lat": 45.4319310,
+  "lon": -75.6961567
+},
+{
+  "type": "node",
+  "id": 6361656293,
+  "lat": 45.4320307,
+  "lon": -75.6961383
+},
+{
+  "type": "node",
+  "id": 6361656299,
+  "lat": 45.4299407,
+  "lon": -75.6970095
+},
+{
+  "type": "node",
+  "id": 6361656301,
+  "lat": 45.4305556,
+  "lon": -75.6975191
+},
+{
+  "type": "node",
+  "id": 6361656310,
+  "lat": 45.4328100,
+  "lon": -75.6969000
+},
+{
+  "type": "node",
+  "id": 6361656312,
+  "lat": 45.4320093,
+  "lon": -75.6986906
+},
+{
+  "type": "node",
+  "id": 6371322641,
+  "lat": 45.4307930,
+  "lon": -75.6950554
+},
+{
+  "type": "node",
+  "id": 6371322643,
+  "lat": 45.4308031,
+  "lon": -75.6951850
+},
+{
+  "type": "node",
+  "id": 6371322644,
+  "lat": 45.4307193,
+  "lon": -75.6952255
+},
+{
+  "type": "node",
+  "id": 6371322645,
+  "lat": 45.4313334,
+  "lon": -75.6957615
+},
+{
+  "type": "node",
+  "id": 6371322646,
+  "lat": 45.4313245,
+  "lon": -75.6957820
+},
+{
+  "type": "node",
+  "id": 6371322647,
+  "lat": 45.4314292,
+  "lon": -75.6955444
+},
+{
+  "type": "node",
+  "id": 6371322648,
+  "lat": 45.4314090,
+  "lon": -75.6955902
+},
+{
+  "type": "node",
+  "id": 6820738431,
+  "lat": 45.4325890,
+  "lon": -75.6942984
+},
+{
+  "type": "node",
+  "id": 6820841011,
+  "lat": 45.4314267,
+  "lon": -75.6984075
+},
+{
+  "type": "node",
+  "id": 7283468649,
+  "lat": 45.4300178,
+  "lon": -75.6948330
+},
+{
+  "type": "node",
+  "id": 7283468678,
+  "lat": 45.4302255,
+  "lon": -75.6943108
+},
+{
+  "type": "node",
+  "id": 7327045519,
+  "lat": 45.4322441,
+  "lon": -75.6956513
+},
+{
+  "type": "node",
+  "id": 7787781211,
+  "lat": 45.4325301,
+  "lon": -75.6974111
+},
+{
+  "type": "node",
+  "id": 7787781217,
+  "lat": 45.4324393,
+  "lon": -75.6976355
+},
+{
+  "type": "node",
+  "id": 7787781228,
+  "lat": 45.4328286,
+  "lon": -75.6987783
+},
+{
+  "type": "node",
+  "id": 7787781252,
+  "lat": 45.4311800,
+  "lon": -75.6961082
+},
+{
+  "type": "node",
+  "id": 7787781263,
+  "lat": 45.4317220,
+  "lon": -75.6959730
+},
+{
+  "type": "node",
+  "id": 7787781274,
+  "lat": 45.4310091,
+  "lon": -75.6964942
+},
+{
+  "type": "node",
+  "id": 7787781294,
+  "lat": 45.4308491,
+  "lon": -75.6968556
+},
+{
+  "type": "node",
+  "id": 7787781308,
+  "lat": 45.4306526,
+  "lon": -75.6972994
+},
+{
+  "type": "node",
+  "id": 7787781321,
+  "lat": 45.4295947,
+  "lon": -75.6968244
+},
+{
+  "type": "node",
+  "id": 7787781326,
+  "lat": 45.4301245,
+  "lon": -75.6965885
+},
+{
+  "type": "node",
+  "id": 7787781460,
+  "lat": 45.4322101,
+  "lon": -75.6982019
+},
+{
+  "type": "node",
+  "id": 7787781477,
+  "lat": 45.4314555,
+  "lon": -75.6974367
+},
+{
+  "type": "node",
+  "id": 7787781489,
+  "lat": 45.4315532,
+  "lon": -75.6958243
+},
+{
+  "type": "node",
+  "id": 8489899995,
+  "lat": 45.4326247,
+  "lon": -75.6992139
+},
+{
+  "type": "node",
+  "id": 8489899996,
+  "lat": 45.4326134,
+  "lon": -75.6992997
+},
+{
+  "type": "node",
+  "id": 8489900003,
+  "lat": 45.4321423,
+  "lon": -75.6990248
+},
+{
+  "type": "node",
+  "id": 8651890676,
+  "lat": 45.4322238,
+  "lon": -75.6990851
+},
+{
+  "type": "node",
+  "id": 8652944425,
+  "lat": 45.4308019,
+  "lon": -75.6979413
+},
+{
+  "type": "node",
+  "id": 8652944426,
+  "lat": 45.4308344,
+  "lon": -75.6978589
+},
+{
+  "type": "node",
+  "id": 9933332207,
+  "lat": 45.4319106,
+  "lon": -75.6961391
+},
+{
+  "type": "node",
+  "id": 9933332208,
+  "lat": 45.4320408,
+  "lon": -75.6961152
+},
+{
+  "type": "node",
+  "id": 901048235,
+  "lat": 45.4311868,
+  "lon": -75.6900926
+},
+{
+  "type": "node",
+  "id": 901050668,
+  "lat": 45.4302483,
+  "lon": -75.6922767
+},
+{
+  "type": "node",
+  "id": 901059649,
+  "lat": 45.4308654,
+  "lon": -75.6928213
+},
+{
+  "type": "node",
+  "id": 901059890,
+  "lat": 45.4321460,
+  "lon": -75.6939113
+},
+{
+  "type": "node",
+  "id": 901061530,
+  "lat": 45.4294874,
+  "lon": -75.6940632
+},
+{
+  "type": "node",
+  "id": 901061749,
+  "lat": 45.4325201,
+  "lon": -75.6911736
+},
+{
+  "type": "node",
+  "id": 901061809,
+  "lat": 45.4324722,
+  "lon": -75.6890554
+},
+{
+  "type": "node",
+  "id": 901061905,
+  "lat": 45.4315328,
+  "lon": -75.6933784
+},
+{
+  "type": "node",
+  "id": 901063288,
+  "lat": 45.4296131,
+  "lon": -75.6917394
+},
+{
+  "type": "node",
+  "id": 901065732,
+  "lat": 45.4318195,
+  "lon": -75.6905947
+},
+{
+  "type": "node",
+  "id": 3104898034,
+  "lat": 45.4295346,
+  "lon": -75.6939566
+},
+{
+  "type": "node",
+  "id": 3104898141,
+  "lat": 45.4301922,
+  "lon": -75.6922325
+},
+{
+  "type": "node",
+  "id": 3104898142,
+  "lat": 45.4302060,
+  "lon": -75.6923687
+},
+{
+  "type": "node",
+  "id": 3104898143,
+  "lat": 45.4302774,
+  "lon": -75.6922017
+},
+{
+  "type": "node",
+  "id": 3104898144,
+  "lat": 45.4303030,
+  "lon": -75.6923244
+},
+{
+  "type": "node",
+  "id": 3262751844,
+  "lat": 45.4324309,
+  "lon": -75.6891527
+},
+{
+  "type": "node",
+  "id": 3686377312,
+  "lat": 45.4308044,
+  "lon": -75.6927667
+},
+{
+  "type": "node",
+  "id": 3686377313,
+  "lat": 45.4308255,
+  "lon": -75.6929103
+},
+{
+  "type": "node",
+  "id": 3686377314,
+  "lat": 45.4309064,
+  "lon": -75.6927255
+},
+{
+  "type": "node",
+  "id": 3686377315,
+  "lat": 45.4309223,
+  "lon": -75.6928691
+},
+{
+  "type": "node",
+  "id": 3686377592,
+  "lat": 45.4295533,
+  "lon": -75.6916851
+},
+{
+  "type": "node",
+  "id": 3686377595,
+  "lat": 45.4296598,
+  "lon": -75.6917837
+},
+{
+  "type": "node",
+  "id": 5600998625,
+  "lat": 45.4320895,
+  "lon": -75.6940401
+},
+{
+  "type": "node",
+  "id": 5600998626,
+  "lat": 45.4322116,
+  "lon": -75.6937649
+},
+{
+  "type": "node",
+  "id": 5600998628,
+  "lat": 45.4321886,
+  "lon": -75.6938136
+},
+{
+  "type": "node",
+  "id": 5600998630,
+  "lat": 45.4321009,
+  "lon": -75.6938705
+},
+{
+  "type": "node",
+  "id": 5600998632,
+  "lat": 45.4321035,
+  "lon": -75.6940080
+},
+{
+  "type": "node",
+  "id": 5600998655,
+  "lat": 45.4318556,
+  "lon": -75.6905095
+},
+{
+  "type": "node",
+  "id": 5600998659,
+  "lat": 45.4317783,
+  "lon": -75.6906908
+},
+{
+  "type": "node",
+  "id": 5600998663,
+  "lat": 45.4312274,
+  "lon": -75.6899962
+},
+{
+  "type": "node",
+  "id": 5600998667,
+  "lat": 45.4311474,
+  "lon": -75.6901839
+},
+{
+  "type": "node",
+  "id": 5791143888,
+  "lat": 45.4292018,
+  "lon": -75.6913993
+},
+{
+  "type": "node",
+  "id": 5791262544,
+  "lat": 45.4313663,
+  "lon": -75.6896667
+},
+{
+  "type": "node",
+  "id": 5791262565,
+  "lat": 45.4325601,
+  "lon": -75.6910848
+},
+{
+  "type": "node",
+  "id": 5791262566,
+  "lat": 45.4324711,
+  "lon": -75.6912811
+},
+{
+  "type": "node",
+  "id": 6371322172,
+  "lat": 45.4315648,
+  "lon": -75.6932891
+},
+{
+  "type": "node",
+  "id": 6371322173,
+  "lat": 45.4314669,
+  "lon": -75.6935164
+},
+{
+  "type": "node",
+  "id": 6371322174,
+  "lat": 45.4314853,
+  "lon": -75.6934749
+},
+{
+  "type": "node",
+  "id": 6371322177,
+  "lat": 45.4325558,
+  "lon": -75.6910943
+},
+{
+  "type": "node",
+  "id": 6371322178,
+  "lat": 45.4324846,
+  "lon": -75.6912514
+},
+{
+  "type": "node",
+  "id": 6392138501,
+  "lat": 45.4306398,
+  "lon": -75.6913735
+},
+{
+  "type": "node",
+  "id": 6392138504,
+  "lat": 45.4304510,
+  "lon": -75.6918159
+},
+{
+  "type": "node",
+  "id": 6392138508,
+  "lat": 45.4300468,
+  "lon": -75.6927453
+},
+{
+  "type": "node",
+  "id": 6392138512,
+  "lat": 45.4296284,
+  "lon": -75.6937348
+},
+{
+  "type": "node",
+  "id": 6812497744,
+  "lat": 45.4305849,
+  "lon": -75.6925808
+},
+{
+  "type": "node",
+  "id": 6812497745,
+  "lat": 45.4317226,
+  "lon": -75.6908208
+},
+{
+  "type": "node",
+  "id": 6813090407,
+  "lat": 45.4305590,
+  "lon": -75.6915628
+},
+{
+  "type": "node",
+  "id": 6813090408,
+  "lat": 45.4295271,
+  "lon": -75.6916639
+},
+{
+  "type": "node",
+  "id": 7132405067,
+  "lat": 45.4322798,
+  "lon": -75.6895091
+},
+{
+  "type": "node",
+  "id": 7283468612,
+  "lat": 45.4309470,
+  "lon": -75.6926307
+},
+{
+  "type": "node",
+  "id": 7283468684,
+  "lat": 45.4310263,
+  "lon": -75.6924458
+},
+{
+  "type": "node",
+  "id": 7283468886,
+  "lat": 45.4306187,
+  "lon": -75.6926094
+},
+{
+  "type": "node",
+  "id": 7283468892,
+  "lat": 45.4313610,
+  "lon": -75.6932430
+},
+{
+  "type": "node",
+  "id": 7283468904,
+  "lat": 45.4310083,
+  "lon": -75.6924877
+},
+{
+  "type": "node",
+  "id": 7283468917,
+  "lat": 45.4315994,
+  "lon": -75.6911082
+},
+{
+  "type": "node",
+  "id": 7375871585,
+  "lat": 45.4308635,
+  "lon": -75.6908493
+},
+{
+  "type": "node",
+  "id": 7375871597,
+  "lat": 45.4305913,
+  "lon": -75.6914870
+},
+{
+  "type": "node",
+  "id": 7450044729,
+  "lat": 45.4316497,
+  "lon": -75.6930992
+},
+{
+  "type": "node",
+  "id": 7450044731,
+  "lat": 45.4315832,
+  "lon": -75.6932427
+},
+{
+  "type": "node",
+  "id": 7450044732,
+  "lat": 45.4316752,
+  "lon": -75.6930413
+},
+{
+  "type": "node",
+  "id": 7450085297,
+  "lat": 45.4322662,
+  "lon": -75.6936431
+},
+{
+  "type": "node",
+  "id": 7450085308,
+  "lat": 45.4322882,
+  "lon": -75.6935939
+},
+{
+  "type": "node",
+  "id": 7787781529,
+  "lat": 45.4320767,
+  "lon": -75.6921533
+},
+{
+  "type": "node",
+  "id": 7787781545,
+  "lat": 45.4311542,
+  "lon": -75.6921473
+},
+{
+  "type": "node",
+  "id": 7787781549,
+  "lat": 45.4323427,
+  "lon": -75.6893608
+},
+{
+  "type": "node",
+  "id": 901046289,
+  "lat": 45.4339132,
+  "lon": -75.6981656
+},
+{
+  "type": "node",
+  "id": 901046547,
+  "lat": 45.4333191,
+  "lon": -75.6993962
+},
+{
+  "type": "node",
+  "id": 901047359,
+  "lat": 45.4341130,
+  "lon": -75.6955857
+},
+{
+  "type": "node",
+  "id": 901047986,
+  "lat": 45.4348267,
+  "lon": -75.6987737
+},
+{
+  "type": "node",
+  "id": 901048525,
+  "lat": 45.4336946,
+  "lon": -75.6990815
+},
+{
+  "type": "node",
+  "id": 901052134,
+  "lat": 45.4331694,
+  "lon": -75.6992720
+},
+{
+  "type": "node",
+  "id": 901052287,
+  "lat": 45.4345144,
+  "lon": -75.6991256
+},
+{
+  "type": "node",
+  "id": 901052930,
+  "lat": 45.4342629,
+  "lon": -75.6992293
+},
+{
+  "type": "node",
+  "id": 901053240,
+  "lat": 45.4333884,
+  "lon": -75.6973885
+},
+{
+  "type": "node",
+  "id": 901053743,
+  "lat": 45.4333303,
+  "lon": -75.6992666
+},
+{
+  "type": "node",
+  "id": 901055184,
+  "lat": 45.4347310,
+  "lon": -75.6961201
+},
+{
+  "type": "node",
+  "id": 901055521,
+  "lat": 45.4346686,
+  "lon": -75.6942408
+},
+{
+  "type": "node",
+  "id": 901055637,
+  "lat": 45.4337402,
+  "lon": -75.6989024
+},
+{
+  "type": "node",
+  "id": 901057703,
+  "lat": 45.4352932,
+  "lon": -75.6947587
+},
+{
+  "type": "node",
+  "id": 901057880,
+  "lat": 45.4334923,
+  "lon": -75.6950705
+},
+{
+  "type": "node",
+  "id": 901060675,
+  "lat": 45.4344876,
+  "lon": -75.6989498
+},
+{
+  "type": "node",
+  "id": 901060739,
+  "lat": 45.4336870,
+  "lon": -75.6988894
+},
+{
+  "type": "node",
+  "id": 901062704,
+  "lat": 45.4337912,
+  "lon": -75.6983884
+},
+{
+  "type": "node",
+  "id": 901063108,
+  "lat": 45.4340203,
+  "lon": -75.6979136
+},
+{
+  "type": "node",
+  "id": 901063214,
+  "lat": 45.4338347,
+  "lon": -75.6984047
+},
+{
+  "type": "node",
+  "id": 901063683,
+  "lat": 45.4344019,
+  "lon": -75.6989931
+},
+{
+  "type": "node",
+  "id": 901064498,
+  "lat": 45.4337420,
+  "lon": -75.6993670
+},
+{
+  "type": "node",
+  "id": 901064870,
+  "lat": 45.4345915,
+  "lon": -75.6965105
+},
+{
+  "type": "node",
+  "id": 901065123,
+  "lat": 45.4337017,
+  "lon": -75.6992127
+},
+{
+  "type": "node",
+  "id": 901066100,
+  "lat": 45.4354539,
+  "lon": -75.6984114
+},
+{
+  "type": "node",
+  "id": 1034342905,
+  "lat": 45.4336950,
+  "lon": -75.6986944
+},
+{
+  "type": "node",
+  "id": 1034342908,
+  "lat": 45.4337472,
+  "lon": -75.6987124
+},
+{
+  "type": "node",
+  "id": 1417117487,
+  "lat": 45.4345722,
+  "lon": -75.6989098
+},
+{
+  "type": "node",
+  "id": 1417117496,
+  "lat": 45.4338063,
+  "lon": -75.6985947
+},
+{
+  "type": "node",
+  "id": 1417117500,
+  "lat": 45.4347823,
+  "lon": -75.6959958
+},
+{
+  "type": "node",
+  "id": 1417117501,
+  "lat": 45.4335989,
+  "lon": -75.6992320
+},
+{
+  "type": "node",
+  "id": 1417117503,
+  "lat": 45.4331696,
+  "lon": -75.6993950
+},
+{
+  "type": "node",
+  "id": 1417117510,
+  "lat": 45.4343040,
+  "lon": -75.6990339
+},
+{
+  "type": "node",
+  "id": 1417117512,
+  "lat": 45.4336895,
+  "lon": -75.6987733
+},
+{
+  "type": "node",
+  "id": 1417117537,
+  "lat": 45.4345110,
+  "lon": -75.6959149
+},
+{
+  "type": "node",
+  "id": 1417117542,
+  "lat": 45.4337901,
+  "lon": -75.6987494
+},
+{
+  "type": "node",
+  "id": 1417117544,
+  "lat": 45.4337596,
+  "lon": -75.6991993
+},
+{
+  "type": "node",
+  "id": 1417117550,
+  "lat": 45.4339993,
+  "lon": -75.6991339
+},
+{
+  "type": "node",
+  "id": 1417117552,
+  "lat": 45.4337205,
+  "lon": -75.6985801
+},
+{
+  "type": "node",
+  "id": 1417117560,
+  "lat": 45.4334545,
+  "lon": -75.6992552
+},
+{
+  "type": "node",
+  "id": 1417117562,
+  "lat": 45.4343776,
+  "lon": -75.6991866
+},
+{
+  "type": "node",
+  "id": 1417117574,
+  "lat": 45.4346895,
+  "lon": -75.6988515
+},
+{
+  "type": "node",
+  "id": 1417117594,
+  "lat": 45.4341870,
+  "lon": -75.6990780
+},
+{
+  "type": "node",
+  "id": 1417117595,
+  "lat": 45.4337434,
+  "lon": -75.6985064
+},
+{
+  "type": "node",
+  "id": 1417609942,
+  "lat": 45.4342672,
+  "lon": -75.6973294
+},
+{
+  "type": "node",
+  "id": 1417609943,
+  "lat": 45.4349071,
+  "lon": -75.6987333
+},
+{
+  "type": "node",
+  "id": 1417635050,
+  "lat": 45.4342137,
+  "lon": -75.6974592
+},
+{
+  "type": "node",
+  "id": 1417635051,
+  "lat": 45.4335744,
+  "lon": -75.6969311
+},
+{
+  "type": "node",
+  "id": 1417638489,
+  "lat": 45.4335881,
+  "lon": -75.6975535
+},
+{
+  "type": "node",
+  "id": 1417638495,
+  "lat": 45.4341694,
+  "lon": -75.6975665
+},
+{
+  "type": "node",
+  "id": 1417639602,
+  "lat": 45.4342317,
+  "lon": -75.6974154
+},
+{
+  "type": "node",
+  "id": 1417639617,
+  "lat": 45.4329582,
+  "lon": -75.6963646
+},
+{
+  "type": "node",
+  "id": 1417639637,
+  "lat": 45.4335979,
+  "lon": -75.6968723
+},
+{
+  "type": "node",
+  "id": 1417643934,
+  "lat": 45.4342041,
+  "lon": -75.6974822
+},
+{
+  "type": "node",
+  "id": 1417643952,
+  "lat": 45.4339549,
+  "lon": -75.6980661
+},
+{
+  "type": "node",
+  "id": 1417645480,
+  "lat": 45.4343974,
+  "lon": -75.6949035
+},
+{
+  "type": "node",
+  "id": 1417645485,
+  "lat": 45.4350197,
+  "lon": -75.6954210
+},
+{
+  "type": "node",
+  "id": 2537077619,
+  "lat": 45.4339423,
+  "lon": -75.6978476
+},
+{
+  "type": "node",
+  "id": 2608859935,
+  "lat": 45.4354951,
+  "lon": -75.6985681
+},
+{
+  "type": "node",
+  "id": 3686374592,
+  "lat": 45.4348721,
+  "lon": -75.6989389
+},
+{
+  "type": "node",
+  "id": 3686375336,
+  "lat": 45.4333067,
+  "lon": -75.6973195
+},
+{
+  "type": "node",
+  "id": 3686375338,
+  "lat": 45.4334654,
+  "lon": -75.6974521
+},
+{
+  "type": "node",
+  "id": 5293924876,
+  "lat": 45.4334205,
+  "lon": -75.6952477
+},
+{
+  "type": "node",
+  "id": 5293924885,
+  "lat": 45.4329110,
+  "lon": -75.6964787
+},
+{
+  "type": "node",
+  "id": 5293924887,
+  "lat": 45.4335495,
+  "lon": -75.6969925
+},
+{
+  "type": "node",
+  "id": 5293924889,
+  "lat": 45.4337674,
+  "lon": -75.6964489
+},
+{
+  "type": "node",
+  "id": 5519390894,
+  "lat": 45.4350012,
+  "lon": -75.6986755
+},
+{
+  "type": "node",
+  "id": 5600998584,
+  "lat": 45.4338482,
+  "lon": -75.6990309
+},
+{
+  "type": "node",
+  "id": 5600998585,
+  "lat": 45.4339198,
+  "lon": -75.6990986
+},
+{
+  "type": "node",
+  "id": 5600998586,
+  "lat": 45.4338741,
+  "lon": -75.6990637
+},
+{
+  "type": "node",
+  "id": 5600998587,
+  "lat": 45.4338143,
+  "lon": -75.6989497
+},
+{
+  "type": "node",
+  "id": 5600998589,
+  "lat": 45.4337922,
+  "lon": -75.6988453
+},
+{
+  "type": "node",
+  "id": 5600998591,
+  "lat": 45.4336384,
+  "lon": -75.6993799
+},
+{
+  "type": "node",
+  "id": 5600998592,
+  "lat": 45.4336289,
+  "lon": -75.6992267
+},
+{
+  "type": "node",
+  "id": 5600998594,
+  "lat": 45.4337532,
+  "lon": -75.6990698
+},
+{
+  "type": "node",
+  "id": 5600998596,
+  "lat": 45.4338322,
+  "lon": -75.6991790
+},
+{
+  "type": "node",
+  "id": 5600998597,
+  "lat": 45.4338470,
+  "lon": -75.6993478
+},
+{
+  "type": "node",
+  "id": 5600998603,
+  "lat": 45.4346903,
+  "lon": -75.6960740
+},
+{
+  "type": "node",
+  "id": 5600998605,
+  "lat": 45.4346973,
+  "lon": -75.6961973
+},
+{
+  "type": "node",
+  "id": 5600998607,
+  "lat": 45.4340776,
+  "lon": -75.6956764
+},
+{
+  "type": "node",
+  "id": 5600998609,
+  "lat": 45.4340664,
+  "lon": -75.6955447
+},
+{
+  "type": "node",
+  "id": 5600998611,
+  "lat": 45.4341508,
+  "lon": -75.6954937
+},
+{
+  "type": "node",
+  "id": 5600998613,
+  "lat": 45.4341748,
+  "lon": -75.6956359
+},
+{
+  "type": "node",
+  "id": 5600998616,
+  "lat": 45.4334350,
+  "lon": -75.6952166
+},
+{
+  "type": "node",
+  "id": 5791288483,
+  "lat": 45.4329748,
+  "lon": -75.6992595
+},
+{
+  "type": "node",
+  "id": 5791288484,
+  "lat": 45.4337409,
+  "lon": -75.6988061
+},
+{
+  "type": "node",
+  "id": 5933561406,
+  "lat": 45.4336120,
+  "lon": -75.6947818
+},
+{
+  "type": "node",
+  "id": 6361656184,
+  "lat": 45.4339648,
+  "lon": -75.6978663
+},
+{
+  "type": "node",
+  "id": 6361656289,
+  "lat": 45.4334493,
+  "lon": -75.6974388
+},
+{
+  "type": "node",
+  "id": 6361656290,
+  "lat": 45.4333328,
+  "lon": -75.6973415
+},
+{
+  "type": "node",
+  "id": 6361656308,
+  "lat": 45.4334539,
+  "lon": -75.6951697
+},
+{
+  "type": "node",
+  "id": 6371322545,
+  "lat": 45.4335306,
+  "lon": -75.6949808
+},
+{
+  "type": "node",
+  "id": 6632655670,
+  "lat": 45.4332929,
+  "lon": -75.6955560
+},
+{
+  "type": "node",
+  "id": 6689997839,
+  "lat": 45.4346812,
+  "lon": -75.6962398
+},
+{
+  "type": "node",
+  "id": 6689997840,
+  "lat": 45.4346705,
+  "lon": -75.6960551
+},
+{
+  "type": "node",
+  "id": 6820738432,
+  "lat": 45.4342610,
+  "lon": -75.6973445
+},
+{
+  "type": "node",
+  "id": 6820738433,
+  "lat": 45.4337041,
+  "lon": -75.6986431
+},
+{
+  "type": "node",
+  "id": 6820841010,
+  "lat": 45.4335426,
+  "lon": -75.6992427
+},
+{
+  "type": "node",
+  "id": 6958038655,
+  "lat": 45.4339072,
+  "lon": -75.6961006
+},
+{
+  "type": "node",
+  "id": 6958038661,
+  "lat": 45.4352577,
+  "lon": -75.6948446
+},
+{
+  "type": "node",
+  "id": 6958038667,
+  "lat": 45.4350757,
+  "lon": -75.6952853
+},
+{
+  "type": "node",
+  "id": 6958080404,
+  "lat": 45.4343765,
+  "lon": -75.6970498
+},
+{
+  "type": "node",
+  "id": 7327045487,
+  "lat": 45.4328840,
+  "lon": -75.6965440
+},
+{
+  "type": "node",
+  "id": 7787781197,
+  "lat": 45.4330418,
+  "lon": -75.6970958
+},
+{
+  "type": "node",
+  "id": 7787781556,
+  "lat": 45.4347583,
+  "lon": -75.6988120
+},
+{
+  "type": "node",
+  "id": 8489899991,
+  "lat": 45.4337456,
+  "lon": -75.6989939
+},
+{
+  "type": "node",
+  "id": 8489899993,
+  "lat": 45.4337719,
+  "lon": -75.6985929
+},
+{
+  "type": "node",
+  "id": 8489899994,
+  "lat": 45.4330021,
+  "lon": -75.6993842
+},
+{
+  "type": "node",
+  "id": 8489900000,
+  "lat": 45.4340675,
+  "lon": -75.6992917
+},
+{
+  "type": "node",
+  "id": 8489900001,
+  "lat": 45.4334774,
+  "lon": -75.6993909
+},
+{
+  "type": "node",
+  "id": 8651890662,
+  "lat": 45.4339705,
+  "lon": -75.6993171
+},
+{
+  "type": "node",
+  "id": 824659059,
+  "lat": 45.4346046,
+  "lon": -75.6923544
+},
+{
+  "type": "node",
+  "id": 824670027,
+  "lat": 45.4352558,
+  "lon": -75.6928180
+},
+{
+  "type": "node",
+  "id": 824676509,
+  "lat": 45.4342986,
+  "lon": -75.6931018
+},
+{
+  "type": "node",
+  "id": 901045399,
+  "lat": 45.4338048,
+  "lon": -75.6899160
+},
+{
+  "type": "node",
+  "id": 901045875,
+  "lat": 45.4356230,
+  "lon": -75.6916871
+},
+{
+  "type": "node",
+  "id": 901046924,
+  "lat": 45.4357918,
+  "lon": -75.6935517
+},
+{
+  "type": "node",
+  "id": 901047237,
+  "lat": 45.4343270,
+  "lon": -75.6909076
+},
+{
+  "type": "node",
+  "id": 901047240,
+  "lat": 45.4349691,
+  "lon": -75.6911763
+},
+{
+  "type": "node",
+  "id": 901051093,
+  "lat": 45.4350018,
+  "lon": -75.6913637
+},
+{
+  "type": "node",
+  "id": 901051120,
+  "lat": 45.4343936,
+  "lon": -75.6928039
+},
+{
+  "type": "node",
+  "id": 901051574,
+  "lat": 45.4334787,
+  "lon": -75.6909390
+},
+{
+  "type": "node",
+  "id": 901051659,
+  "lat": 45.4353327,
+  "lon": -75.6911750
+},
+{
+  "type": "node",
+  "id": 901053778,
+  "lat": 45.4352378,
+  "lon": -75.6885407
+},
+{
+  "type": "node",
+  "id": 901054868,
+  "lat": 45.4331349,
+  "lon": -75.6917038
+},
+{
+  "type": "node",
+  "id": 901057476,
+  "lat": 45.4349447,
+  "lon": -75.6935772
+},
+{
+  "type": "node",
+  "id": 901058159,
+  "lat": 45.4351127,
+  "lon": -75.6931756
+},
+{
+  "type": "node",
+  "id": 901058793,
+  "lat": 45.4344132,
+  "lon": -75.6904685
+},
+{
+  "type": "node",
+  "id": 901062083,
+  "lat": 45.4351434,
+  "lon": -75.6910409
+},
+{
+  "type": "node",
+  "id": 901064555,
+  "lat": 45.4354441,
+  "lon": -75.6915439
+},
+{
+  "type": "node",
+  "id": 901064660,
+  "lat": 45.4349647,
+  "lon": -75.6914669
+},
+{
+  "type": "node",
+  "id": 901065928,
+  "lat": 45.4360970,
+  "lon": -75.6920803
+},
+{
+  "type": "node",
+  "id": 901066372,
+  "lat": 45.4337310,
+  "lon": -75.6922518
+},
+{
+  "type": "node",
+  "id": 1263694649,
+  "lat": 45.4352530,
+  "lon": -75.6913924
+},
+{
+  "type": "node",
+  "id": 1263694673,
+  "lat": 45.4362996,
+  "lon": -75.6924807
+},
+{
+  "type": "node",
+  "id": 1524717010,
+  "lat": 45.4351110,
+  "lon": -75.6888340
+},
+{
+  "type": "node",
+  "id": 1655122340,
+  "lat": 45.4337768,
+  "lon": -75.6899780
+},
+{
+  "type": "node",
+  "id": 1655122378,
+  "lat": 45.4336991,
+  "lon": -75.6900041
+},
+{
+  "type": "node",
+  "id": 1655123007,
+  "lat": 45.4335751,
+  "lon": -75.6899767
+},
+{
+  "type": "node",
+  "id": 1655123040,
+  "lat": 45.4337592,
+  "lon": -75.6899918
+},
+{
+  "type": "node",
+  "id": 1655123213,
+  "lat": 45.4338718,
+  "lon": -75.6899863
+},
+{
+  "type": "node",
+  "id": 1655123254,
+  "lat": 45.4336962,
+  "lon": -75.6903972
+},
+{
+  "type": "node",
+  "id": 1655123300,
+  "lat": 45.4338032,
+  "lon": -75.6901411
+},
+{
+  "type": "node",
+  "id": 2262719554,
+  "lat": 45.4350046,
+  "lon": -75.6912635
+},
+{
+  "type": "node",
+  "id": 2262719562,
+  "lat": 45.4350081,
+  "lon": -75.6913065
+},
+{
+  "type": "node",
+  "id": 2262719565,
+  "lat": 45.4347257,
+  "lon": -75.6909067
+},
+{
+  "type": "node",
+  "id": 2262722194,
+  "lat": 45.4362634,
+  "lon": -75.6923707
+},
+{
+  "type": "node",
+  "id": 2262722199,
+  "lat": 45.4362224,
+  "lon": -75.6922723
+},
+{
+  "type": "node",
+  "id": 2262722201,
+  "lat": 45.4355640,
+  "lon": -75.6920648
+},
+{
+  "type": "node",
+  "id": 2262722205,
+  "lat": 45.4357773,
+  "lon": -75.6914738
+},
+{
+  "type": "node",
+  "id": 2262722213,
+  "lat": 45.4360150,
+  "lon": -75.6919977
+},
+{
+  "type": "node",
+  "id": 2262722219,
+  "lat": 45.4361633,
+  "lon": -75.6921719
+},
+{
+  "type": "node",
+  "id": 2262736516,
+  "lat": 45.4349930,
+  "lon": -75.6912216
+},
+{
+  "type": "node",
+  "id": 2280814794,
+  "lat": 45.4328631,
+  "lon": -75.6904115
+},
+{
+  "type": "node",
+  "id": 2280814798,
+  "lat": 45.4331196,
+  "lon": -75.6898113
+},
+{
+  "type": "node",
+  "id": 2396329479,
+  "lat": 45.4336880,
+  "lon": -75.6923494
+},
+{
+  "type": "node",
+  "id": 3783522396,
+  "lat": 45.4344327,
+  "lon": -75.6906623
+},
+{
+  "type": "node",
+  "id": 3783522399,
+  "lat": 45.4346126,
+  "lon": -75.6900032
+},
+{
+  "type": "node",
+  "id": 4584544306,
+  "lat": 45.4351374,
+  "lon": -75.6931029
+},
+{
+  "type": "node",
+  "id": 5157117971,
+  "lat": 45.4337678,
+  "lon": -75.6901142
+},
+{
+  "type": "node",
+  "id": 5791262545,
+  "lat": 45.4344668,
+  "lon": -75.6903435
+},
+{
+  "type": "node",
+  "id": 5791262546,
+  "lat": 45.4356585,
+  "lon": -75.6875495
+},
+{
+  "type": "node",
+  "id": 5791262555,
+  "lat": 45.4346894,
+  "lon": -75.6924148
+},
+{
+  "type": "node",
+  "id": 5791262561,
+  "lat": 45.4337808,
+  "lon": -75.6921395
+},
+{
+  "type": "node",
+  "id": 5791262562,
+  "lat": 45.4330573,
+  "lon": -75.6918771
+},
+{
+  "type": "node",
+  "id": 5791262563,
+  "lat": 45.4331805,
+  "lon": -75.6915939
+},
+{
+  "type": "node",
+  "id": 5791262564,
+  "lat": 45.4330870,
+  "lon": -75.6918107
+},
+{
+  "type": "node",
+  "id": 5844121489,
+  "lat": 45.4339112,
+  "lon": -75.6940497
+},
+{
+  "type": "node",
+  "id": 5844121491,
+  "lat": 45.4341068,
+  "lon": -75.6935711
+},
+{
+  "type": "node",
+  "id": 5844121493,
+  "lat": 45.4332142,
+  "lon": -75.6934245
+},
+{
+  "type": "node",
+  "id": 5844121495,
+  "lat": 45.4333591,
+  "lon": -75.6930957
+},
+{
+  "type": "node",
+  "id": 6056416609,
+  "lat": 45.4337123,
+  "lon": -75.6900726
+},
+{
+  "type": "node",
+  "id": 6371322175,
+  "lat": 45.4331677,
+  "lon": -75.6916307
+},
+{
+  "type": "node",
+  "id": 6371322176,
+  "lat": 45.4330962,
+  "lon": -75.6917901
+},
+{
+  "type": "node",
+  "id": 6371322520,
+  "lat": 45.4344588,
+  "lon": -75.6903623
+},
+{
+  "type": "node",
+  "id": 6371322531,
+  "lat": 45.4351845,
+  "lon": -75.6927672
+},
+{
+  "type": "node",
+  "id": 6371322532,
+  "lat": 45.4351965,
+  "lon": -75.6927758
+},
+{
+  "type": "node",
+  "id": 6371322534,
+  "lat": 45.4346505,
+  "lon": -75.6923871
+},
+{
+  "type": "node",
+  "id": 6371322539,
+  "lat": 45.4343580,
+  "lon": -75.6929018
+},
+{
+  "type": "node",
+  "id": 6371322540,
+  "lat": 45.4343441,
+  "lon": -75.6929402
+},
+{
+  "type": "node",
+  "id": 6371322541,
+  "lat": 45.4344548,
+  "lon": -75.6927180
+},
+{
+  "type": "node",
+  "id": 6371322588,
+  "lat": 45.4352704,
+  "lon": -75.6884639
+},
+{
+  "type": "node",
+  "id": 6371322590,
+  "lat": 45.4352105,
+  "lon": -75.6886038
+},
+{
+  "type": "node",
+  "id": 6371322650,
+  "lat": 45.4337741,
+  "lon": -75.6921547
+},
+{
+  "type": "node",
+  "id": 6639122770,
+  "lat": 45.4350840,
+  "lon": -75.6932433
+},
+{
+  "type": "node",
+  "id": 6639391287,
+  "lat": 45.4335830,
+  "lon": -75.6925876
+},
+{
+  "type": "node",
+  "id": 6958080387,
+  "lat": 45.4348954,
+  "lon": -75.6936957
+},
+{
+  "type": "node",
+  "id": 7132405069,
+  "lat": 45.4341901,
+  "lon": -75.6904615
+},
+{
+  "type": "node",
+  "id": 7787781370,
+  "lat": 45.4329506,
+  "lon": -75.6940208
+},
+{
+  "type": "node",
+  "id": 7787781377,
+  "lat": 45.4332762,
+  "lon": -75.6913836
+},
+{
+  "type": "node",
+  "id": 7787781513,
+  "lat": 45.4333355,
+  "lon": -75.6912535
+},
+{
+  "type": "node",
+  "id": 7787781517,
+  "lat": 45.4332037,
+  "lon": -75.6915430
+},
+{
+  "type": "node",
+  "id": 7787781555,
+  "lat": 45.4355961,
+  "lon": -75.6940254
+},
+{
+  "type": "node",
+  "id": 901205910,
+  "lat": 45.4360879,
+  "lon": -75.6865069
+},
+{
+  "type": "node",
+  "id": 901210475,
+  "lat": 45.4360880,
+  "lon": -75.6864703
+},
+{
+  "type": "node",
+  "id": 901213388,
+  "lat": 45.4360856,
+  "lon": -75.6865361
+},
+{
+  "type": "node",
+  "id": 1655122754,
+  "lat": 45.4360152,
+  "lon": -75.6867091
+},
+{
+  "type": "node",
+  "id": 5296327609,
+  "lat": 45.4359583,
+  "lon": -75.6868432
+}
+
+  ]
+}

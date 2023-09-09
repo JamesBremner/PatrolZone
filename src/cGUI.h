@@ -72,5 +72,8 @@ private:
     cPatrolZone myZ;
     cOSM myOSM;
 
+    void ConstructMenu();
+    void SetScaleOffset();
+    void Calculate();
     void draw(wex::shapes& S);
 };
