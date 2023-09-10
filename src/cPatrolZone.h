@@ -192,13 +192,14 @@ public:
     void
     move2Road();
 
+
     void textDisplay();
 
     const std::vector<cCrime>& getCrime() const
     {
         return myVCrime;
     }
-    const std::vector<cCluster>& getCluster() const
+    std::vector<cCluster>& getCluster()
     {
         return myVCluster;
     }

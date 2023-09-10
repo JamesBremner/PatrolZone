@@ -62,32 +62,50 @@ void cGUI::SetScaleOffset()
         lonOff, lonScale);
 
     wex::inputbox ib;
-    ib.add("Lat Offset", std::to_string(latOff));
+    // ib.add("Lat Offset", std::to_string(latOff));
     ib.add("Lat Scale", std::to_string(latScale));
-    ib.add("Lon Offset", std::to_string(lonOff));
+    // ib.add("Lon Offset", std::to_string(lonOff));
     ib.add("Lon Scale", std::to_string(lonScale));
     ib.showModal();
 
     myOSM.set(
-        atof(ib.value("Lat Offset").c_str()),
+        0,
         atof(ib.value("Lat Scale").c_str()),
-        atof(ib.value("Lon Offset").c_str()),
+        0,
         atof(ib.value("Lon Scale").c_str()));
 }
 
 void cGUI::Calculate()
 {
     myOSM.read("../dat/nodeway.txt");
+    myOSM.calculateBBox();
+    myOSM.calculatePixel();
 
     myZ.generateCrimeRandom(100, 0, 100, 0, 100);
     myZ.generateRoad();
 
     myZ.AHC(10);
-    myZ.move2Road();
+
+    // myZ.move2Road();
+    move2Way();
 
     // myZ.textDisplay();
 
     fm.update();
+}
+
+void cGUI::move2Way()
+{
+    for (auto &cluster : myZ.getCluster())
+    {
+        int x, y;
+        cluster.getLocation(x, y);
+        cxy p(
+            10 + 10 * x,
+            10 + 10 * y);
+        cluster.setRoadLocation(
+            myOSM.closestOnWay(p));
+    }
 }
 void cGUI::draw(wex::shapes &S)
 {
@@ -95,12 +113,29 @@ void cGUI::draw(wex::shapes &S)
     int off = 10;
     S.penThick(2);
 
-    cxy test  = myOSM.latlon2pixel(45.430, -75.70);
-    cxy test2 = myOSM.latlon2pixel(45.435, -75.69);
-    S.color(0x0000FF);
-    S.circle(test.x, test.y, 2);
-    S.circle(test2.x, test2.y, 2);
+    drawOSM(S);
 
+    S.color(0x0000FF);
+    for (auto &c : myZ.getCrime())
+    {
+        int x, y;
+        c.getLocation(x, y);
+        S.circle(off + scale * x, off + scale * y, 2);
+    }
+
+    S.color(0xFF0000);
+    for (auto &c : myZ.getCluster())
+    {
+        if (c.isDeleted())
+            continue;
+        cxy rl = c.getRoadLocation();
+        // S.circle(off + scale * rl.x, off + scale * rl.y, 4);
+        S.circle(rl.x, rl.y, 4);
+    }
+}
+
+void cGUI::drawOSM(wex::shapes &S)
+{
     S.color(0);
 
     // loop over way
@@ -128,21 +163,5 @@ void cGUI::draw(wex::shapes &S)
         S.text(
             w.myName,
             {(int)prev.x, (int)prev.y});
-    }
-
-    // S.color(0x0000FF);
-    // for (auto &c : myZ.getCrime())
-    // {
-    //     int x, y;
-    //     c.getLocation(x, y);
-    //     S.circle(off + scale * x, off + scale * y, 2);
-    // }
-    S.color(0xFF0000);
-    for (auto &c : myZ.getCluster())
-    {
-        if (c.isDeleted())
-            continue;
-        cxy rl = c.getRoadLocation();
-        S.circle(off + scale * rl.x, off + scale * rl.y, 4);
     }
 }

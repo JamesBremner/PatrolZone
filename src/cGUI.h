@@ -74,6 +74,10 @@ private:
 
     void ConstructMenu();
     void SetScaleOffset();
+
     void Calculate();
+    void move2Way();
+
     void draw(wex::shapes& S);
+    void drawOSM(wex::shapes& S);
 };

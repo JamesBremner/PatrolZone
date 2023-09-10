@@ -10,19 +10,19 @@ void cOSM::set(
     mylonOff = lonOff;
     mylonScale = lonScale;
 }
-    void cOSM::get(
-        double& latOff, double& latScale,
-        double& lonOff, double& lonScale) const
-        {
-            latOff = mylatOff;
-            latScale = mylatScale;
-            lonOff = mylonOff;
-            lonScale = mylonScale;
-        }
-
-bool cOSM::pixelSanity(const cxy& p )
+void cOSM::get(
+    double &latOff, double &latScale,
+    double &lonOff, double &lonScale) const
 {
-    return ! ( p.x < 0 || p.y < 0 || p.x > 1200 || p.y > 1200);
+    latOff = mylatOff;
+    latScale = mylatScale;
+    lonOff = mylonOff;
+    lonScale = mylonScale;
+}
+
+bool cOSM::pixelSanity(const cxy &p)
+{
+    return !(p.x < 0 || p.y < 0 || p.x > 1200 || p.y > 1200);
 }
 
 cxy cOSM::latlon2pixel(double lat, double lon)
@@ -30,13 +30,14 @@ cxy cOSM::latlon2pixel(double lat, double lon)
     cxy p(
         (int)(mylonScale * (mylonOff + lon)),
         (int)(mylatScale * (mylatOff + lat)));
-    if (!pixelSanity( p ))
+    if (!pixelSanity(p))
     {
-        std::cout 
-            <<"Offsets "<<mylatOff<<" "<<mylonOff
-            <<"\n"<< lat << "," << lon 
-            << " -> " << mylonOff + lon <<","<<mylatOff + lat
-            << " -> " << p.x << "," << p.y 
+        std::cout
+            << "Offsets " << mylatOff << " " << mylonOff
+            << "\n"
+            << lat << "," << lon
+            << " -> " << mylonOff + lon << "," << mylatOff + lat
+            << " -> " << p.x << "," << p.y
             << "\n";
     }
 
@@ -48,9 +49,9 @@ cxy cOSM::latlon2pixel(double lat, double lon)
     //     p.y = 1;
     // if( p.y > 900 )
     //     p.y = 900;
-        // throw std::runtime_error(
-        //     "Bad pixel location");
-    
+    // throw std::runtime_error(
+    //     "Bad pixel location");
+
     return p;
 }
 
@@ -66,13 +67,6 @@ void cOSM::read(const std::string &fname)
     int id;
     double lat, lon;
     std::string line;
-
-    double latmin,latmax, lonmin,lonmax;
-    int xmin,xmax, ymin,ymax;
-    latmin = 500;
-    lonmin = 500;
-    latmax  = -500;
-    lonmax = -500;
 
     while (getline(ifs, line))
     {
@@ -99,25 +93,10 @@ void cOSM::read(const std::string &fname)
                 myNode.insert(std::pair<int, cNodeOSM>(
                     id,
                     cNodeOSM(
-                        id, lat, lon )));
-
+                        id, lat, lon)));
             }
         }
     }
-
-
-    calculateBBox();
-    calculatePixel();
-
-    // for( auto& idn : myNode )
-    // {
-    //     double lat,lon;
-    //     idn.second.getlatlon(lat,lon);
-    //     idn.second.setPixel( latlon2pixel(lat,lon));
-    // }
-
-    // std::cout << latmin <<","<< lonmin << "  " 
-    //     <<latmax<<","<<lonmax<<"\n";
 
     // rewind
     ifs.clear();
@@ -176,69 +155,112 @@ void cOSM::read(const std::string &fname)
 
 void cOSM::calculateBBox()
 {
-/*
-    lattitude 
-        runs from south to north
-        +ve in northern hemispehere
+    /*
+        lattitude
+            runs from south to north
+            +ve in northern hemispehere
 
-        north edge of box is greatest lat value
-        south edge og box is least lat value
+            north edge of box is greatest lat value
+            south edge og box is least lat value
 
-        becomes y pixel location 
-        but mist be multiplied by a -ve
-        becuase y pixel value runs from north to south
+            becomes y pixel location
+            but mist be multiplied by a -ve
+            becuase y pixel value runs from north to south
 
-    longitude
-        runs from west to east
-        -ve in North America
+        longitude
+            runs from west to east
+            -ve in North America
 
-        west edge of box is least ( most -ve ) value
-        east edge of box is greatest value 
+            west edge of box is least ( most -ve ) value
+            east edge of box is greatest value
 
-        becomes x pixel location
+            becomes x pixel location
 
 
-*/
+    */
     double north, west, south, east;
-    double lat,lon;
+    double lat, lon;
     north = -500;
     south = 500;
     west = 500;
     east = -500;
-    for( auto& idn : myNode )
+    for (auto &idn : myNode)
     {
-        idn.second.getlatlon( lat, lon );
-        if( lat > north )
+        idn.second.getlatlon(lat, lon);
+        if (lat > north)
             north = lat;
-        if( lat < south)
+        if (lat < south)
             south = lat;
-        if( lon < west )
+        if (lon < west)
             west = lon;
-        if( lon > east )
+        if (lon > east)
             east = lon;
     }
 
     // set north west corner of box
     // gets zero x,y pixel location
 
-    mylatOff = - north;
-    mylonOff = - west;
+    mylatOff = -north;
+    mylonOff = -west;
 
     // std::cout <<"North West ";
     // latlon2pixel(north,west);
     // std::cout <<"South East ";
     // latlon2pixel(south,east);
     // std::cout << north <<" "<< west <<" "<< south <<" "<< east <<"\n";
-
 }
 
 void cOSM::calculatePixel()
 {
-    double lat,lon;
-    for( auto& idn : myNode )
+    double lat, lon;
+    for (auto &idn : myNode)
     {
-        idn.second.getlatlon( lat, lon );
+        idn.second.getlatlon(lat, lon);
         idn.second.setPixel(
-            latlon2pixel(lat,lon)        );
+            latlon2pixel(lat, lon));
     }
+}
+
+double cWayOSM::distance2(
+    const cxy &point,
+    const cOSM &theOSM,
+    cxy& closest )
+{
+    double bestDist = INT_MAX;
+    cxy prev(-1, -1);
+    for (const auto &n : myVNodeID)
+    {
+        // get node pixel location
+        cxy px = theOSM.getNode(n).getPixel();
+        if (prev.x < 0)
+        {
+            prev = px;
+            continue;
+        }
+
+
+        double d = point.dis2toline(prev, px);
+        if (d < bestDist) {
+            bestDist = d;
+            closest = point.closest(prev,px);
+        }
+    }
+    return bestDist;
+}
+
+cxy cOSM::closestOnWay( const cxy& point)
+{
+    cxy closest;
+    double bestDist = INT_MAX;
+    for( auto& w : myVWay )
+    {
+        cxy cp;
+        double d = w.distance2( point, *this, cp );
+        if( d < bestDist ) {
+            bestDist = d;
+            closest = cp;
+        }
+    }
+    return closest;
+    
 }

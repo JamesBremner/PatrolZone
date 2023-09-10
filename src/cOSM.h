@@ -1,5 +1,7 @@
 #include <map>
 
+class cOSM;
+
 // An open street map node
 class cNodeOSM
 {
@@ -16,6 +18,8 @@ public:
         : myID(id), myPixel(x, y)
     {
     }
+
+    // Construct from lat and lon
     cNodeOSM(int id, double lat, double lon)
         : myID(id), myLat( lat ), myLon( lon)
     {
@@ -60,7 +64,19 @@ public:
     {
     }
 
-    const std::vector<int> &getNodes() const
+    /// @brief Least distance squared from point to a way
+    /// @param[in] point specified point
+    /// @param[in] theOSM open street map data
+    /// @param[out] closest point on a way
+    /// @return distance squared from point to closest
+
+    double distance2( 
+        const cxy& point,
+        const cOSM& theOSM,
+         cxy& closest  );
+
+    const std::vector<int> &
+    getNodes() const
     {
         return myVNodeID;
     }
@@ -88,12 +104,25 @@ public:
     }
 
     // get node with ID
-    cNodeOSM &getNode(int id)
+    const cNodeOSM &
+    getNode(const int id) const
     {
-        return myNode[id];
+        return myNode.at(id);
     }
 
+    // Calculate bounding box for all nodes
+    // Sets the offsets for coneversion to pixel location
+    // to north west corner of box
+    void calculateBBox();
+
+    // Calculate pixel location from ever node's lat & lon
+    void calculatePixel();
+
+    // convert lat, lon to pixel x,y
     cxy latlon2pixel(double lat, double lon);
+
+    // closest point on way to specified point
+    cxy closestOnWay( const cxy& point);
 
 private:
     // nodes mapped by index number
@@ -110,6 +139,5 @@ private:
 
     bool pixelSanity(const cxy &p);
 
-    void calculateBBox();
-    void calculatePixel();
+
 };

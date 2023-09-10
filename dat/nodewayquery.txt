@@ -4,3 +4,5 @@ node(45.41,-75.72,45.42,-75.71););
 out body;
 >;
 out skel qt;
+
+  way["highway"~"primary|secondary|tertiary|residential"](45.430,-75.70,45.435,-75.69);
