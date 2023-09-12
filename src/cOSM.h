@@ -105,10 +105,7 @@ public:
 
     // get node with ID
     const cNodeOSM &
-    getNode(const int id) const
-    {
-        return myNode.at(id);
-    }
+    getNode(const int id) const;
 
     // Calculate bounding box for all nodes
     // Sets the offsets for coneversion to pixel location

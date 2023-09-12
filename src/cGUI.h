@@ -71,6 +71,7 @@ public:
 private:
     cPatrolZone myZ;
     cOSM myOSM;
+    std::string myOSMfile;
 
     void ConstructMenu();
     void SetScaleOffset();

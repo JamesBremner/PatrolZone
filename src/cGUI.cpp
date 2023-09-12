@@ -46,7 +46,13 @@ void cGUI::ConstructMenu()
     mbar.append("Calculate", mfile);
 
     wex::menu mConfig(fm);
-    mConfig.append("Offset,scale",
+    mConfig.append("Open Street Map Download file",
+        [&](const std::string &title)
+        {
+            wex::filebox fb(fm);
+            myOSMfile = fb.open();
+        });
+    mConfig.append("Scale",
                    [&](const std::string &title)
                    {
                        SetScaleOffset();
@@ -77,7 +83,7 @@ void cGUI::SetScaleOffset()
 
 void cGUI::Calculate()
 {
-    myOSM.read("../dat/nodeway.txt");
+    myOSM.read(myOSMfile);
     myOSM.calculateBBox();
     myOSM.calculatePixel();
 

@@ -32,13 +32,13 @@ cxy cOSM::latlon2pixel(double lat, double lon)
         (int)(mylatScale * (mylatOff + lat)));
     if (!pixelSanity(p))
     {
-        std::cout
-            << "Offsets " << mylatOff << " " << mylonOff
-            << "\n"
-            << lat << "," << lon
-            << " -> " << mylonOff + lon << "," << mylatOff + lat
-            << " -> " << p.x << "," << p.y
-            << "\n";
+        // std::cout
+        //     << "Offsets " << mylatOff << " " << mylonOff
+        //     << "\n"
+        //     << lat << "," << lon
+        //     << " -> " << mylonOff + lon << "," << mylatOff + lat
+        //     << " -> " << p.x << "," << p.y
+        //     << "\n";
     }
 
     // if( p.x < 1 )
@@ -58,6 +58,7 @@ cxy cOSM::latlon2pixel(double lat, double lon)
 void cOSM::read(const std::string &fname)
 {
     myNode.clear();
+    myVWay.clear();
 
     std::ifstream ifs(fname);
     if (!ifs.is_open())
@@ -161,7 +162,7 @@ void cOSM::calculateBBox()
             +ve in northern hemispehere
 
             north edge of box is greatest lat value
-            south edge og box is least lat value
+            south edge of box is least lat value
 
             becomes y pixel location
             but mist be multiplied by a -ve
@@ -197,17 +198,20 @@ void cOSM::calculateBBox()
             east = lon;
     }
 
+
     // set north west corner of box
     // gets zero x,y pixel location
 
     mylatOff = -north;
     mylonOff = -west;
 
-    // std::cout <<"North West ";
-    // latlon2pixel(north,west);
+    cxy pnw = latlon2pixel(north, west);
+    std::cout << "North West " << pnw.x << " " << pnw.y << "\n";
     // std::cout <<"South East ";
     // latlon2pixel(south,east);
-    // std::cout << north <<" "<< west <<" "<< south <<" "<< east <<"\n";
+    std::cout << north << " " << west << " " << south << " " << east << "\n";
+    std::cout << "OSM bbox S:" << south << " W:" << west
+              << " N:" << north << " E:" << east << "\n";
 }
 
 void cOSM::calculatePixel()
@@ -224,7 +228,7 @@ void cOSM::calculatePixel()
 double cWayOSM::distance2(
     const cxy &point,
     const cOSM &theOSM,
-    cxy& closest )
+    cxy &closest)
 {
     double bestDist = INT_MAX;
     cxy prev(-1, -1);
@@ -238,29 +242,43 @@ double cWayOSM::distance2(
             continue;
         }
 
-
         double d = point.dis2toline(prev, px);
-        if (d < bestDist) {
+        if (d < bestDist)
+        {
             bestDist = d;
-            closest = point.closest(prev,px);
+            closest = point.closest(prev, px);
         }
     }
     return bestDist;
 }
 
-cxy cOSM::closestOnWay( const cxy& point)
+cxy cOSM::closestOnWay(const cxy &point)
 {
     cxy closest;
     double bestDist = INT_MAX;
-    for( auto& w : myVWay )
+    for (auto &w : myVWay)
     {
         cxy cp;
-        double d = w.distance2( point, *this, cp );
-        if( d < bestDist ) {
+        double d = w.distance2(point, *this, cp);
+        if (d < bestDist)
+        {
             bestDist = d;
             closest = cp;
         }
     }
     return closest;
-    
+}
+
+const cNodeOSM &
+cOSM::getNode(const int id) const
+{
+    try
+    {
+        return myNode.at(id);
+    }
+    catch (...)
+    {
+        throw std::runtime_error(
+            "Missing OSM node");
+    }
 }
