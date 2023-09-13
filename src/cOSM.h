@@ -21,15 +21,15 @@ public:
 
     // Construct from lat and lon
     cNodeOSM(int id, double lat, double lon)
-        : myID(id), myLat( lat ), myLon( lon)
+        : myID(id), myLat(lat), myLon(lon)
     {
     }
-    void setPixel( const cxy& p )
+    void setPixel(const cxy &p)
     {
         myPixel = p;
     }
 
-    void getlatlon( double& lat, double& lon ) const
+    void getlatlon(double &lat, double &lon) const
     {
         lat = myLat;
         lon = myLon;
@@ -38,7 +38,6 @@ public:
     {
         return myPixel;
     }
-
 
 private:
     double myLat;
@@ -70,10 +69,10 @@ public:
     /// @param[out] closest point on a way
     /// @return distance squared from point to closest
 
-    double distance2( 
-        const cxy& point,
-        const cOSM& theOSM,
-         cxy& closest  );
+    double distance2(
+        const cxy &point,
+        const cOSM &theOSM,
+        cxy &closest);
 
     const std::vector<int> &
     getNodes() const
@@ -119,7 +118,7 @@ public:
     cxy latlon2pixel(double lat, double lon);
 
     // closest point on way to specified point
-    cxy closestOnWay( const cxy& point);
+    cxy closestOnWay(const cxy &point);
 
 private:
     // nodes mapped by index number
@@ -136,5 +135,12 @@ private:
 
     bool pixelSanity(const cxy &p);
 
+    // Distance between two points ( lat, lon ) in meters
+    static double
+    Haversine(
+        std::pair<double, double> from,
+        std::pair<double, double> to);
 
+    void calcOffsetScale(
+        double north, double west, double south, double east);
 };

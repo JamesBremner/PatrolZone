@@ -74,7 +74,6 @@ private:
     std::string myOSMfile;
 
     void ConstructMenu();
-    void SetScaleOffset();
 
     void Calculate();
     void move2Way();

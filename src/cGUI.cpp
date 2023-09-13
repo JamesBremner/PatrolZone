@@ -11,7 +11,6 @@ cGUI::cGUI()
           "Patrol Zone",
           {50, 50, 1000, 500})
 {
-    myOSM.set(-45.425, -100000, 75.70, 100000);
 
     ConstructMenu();
 
@@ -52,33 +51,8 @@ void cGUI::ConstructMenu()
             wex::filebox fb(fm);
             myOSMfile = fb.open();
         });
-    mConfig.append("Scale",
-                   [&](const std::string &title)
-                   {
-                       SetScaleOffset();
-                   });
+
     mbar.append("Config", mConfig);
-}
-void cGUI::SetScaleOffset()
-{
-    double latOff, latScale;
-    double lonOff, lonScale;
-    myOSM.get(
-        latOff, latScale,
-        lonOff, lonScale);
-
-    wex::inputbox ib;
-    // ib.add("Lat Offset", std::to_string(latOff));
-    ib.add("Lat Scale", std::to_string(latScale));
-    // ib.add("Lon Offset", std::to_string(lonOff));
-    ib.add("Lon Scale", std::to_string(lonScale));
-    ib.showModal();
-
-    myOSM.set(
-        0,
-        atof(ib.value("Lat Scale").c_str()),
-        0,
-        atof(ib.value("Lon Scale").c_str()));
 }
 
 void cGUI::Calculate()
@@ -166,8 +140,9 @@ void cGUI::drawOSM(wex::shapes &S)
 
             prev = px;
         }
-        S.text(
-            w.myName,
-            {(int)prev.x, (int)prev.y});
+        // display the way name
+        // S.text(
+        //     w.myName,
+        //     {(int)prev.x, (int)prev.y});
     }
 }

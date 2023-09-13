@@ -1,3 +1,4 @@
+#include <cmath>
 #include "cPatrolZone.h"
 #include "cOSM.h"
 
@@ -198,13 +199,10 @@ void cOSM::calculateBBox()
             east = lon;
     }
 
+    calcOffsetScale(
+        north, west, south, east    );
 
-    // set north west corner of box
-    // gets zero x,y pixel location
-
-    mylatOff = -north;
-    mylonOff = -west;
-
+ 
     cxy pnw = latlon2pixel(north, west);
     std::cout << "North West " << pnw.x << " " << pnw.y << "\n";
     // std::cout <<"South East ";
@@ -281,4 +279,55 @@ cOSM::getNode(const int id) const
         throw std::runtime_error(
             "Missing OSM node");
     }
+}
+double
+cOSM::Haversine(
+    std::pair<double,double> from,
+    std::pair<double,double> to )
+{
+    // http://blog.julien.cayzac.name/2008/10/arc-and-distance-between-two-points-on.html
+
+    const double DEG_TO_RAD = 0.017453292519943295769236907684886;
+    const double EARTH_RADIUS_IN_METERS = 6372797.560856;
+
+    double latitudeArc  = (from.first - to.first) * DEG_TO_RAD;
+    double longitudeArc = (from.second - to.second) * DEG_TO_RAD;
+    double latitudeH = sin(latitudeArc * 0.5);
+    latitudeH *= latitudeH;
+    double lontitudeH = sin(longitudeArc * 0.5);
+    lontitudeH *= lontitudeH;
+    double tmp = cos(from.first*DEG_TO_RAD) * cos(to.first*DEG_TO_RAD);
+    return EARTH_RADIUS_IN_METERS * 2.0 * asin(sqrt(latitudeH + tmp*lontitudeH));
+}
+
+void cOSM::calcOffsetScale(
+    double north, double west, double south, double east)
+{
+    const int displayXPixelCount = 1000;
+    const int displayYPixelCount = 1000;
+
+    // set north west corner of box
+    // gets zero x,y pixel location
+
+    mylatOff = -north;
+    mylonOff = -west;
+
+    double osmbbxHeightMeters = Haversine(
+        std::make_pair( north, west ),
+        std::make_pair( south, west )    );
+    double osmbbxWidthMeters = Haversine(
+        std::make_pair( north, west ),
+        std::make_pair( north, east )    );
+    double sqbxMeters = osmbbxHeightMeters;
+    if( sqbxMeters > osmbbxWidthMeters )
+        sqbxMeters = osmbbxWidthMeters;
+    double metersPerLat = osmbbxHeightMeters / ( north-south);
+    double metersPerLon = osmbbxWidthMeters / ( east - west);
+    double minlat = north - sqbxMeters / metersPerLat;
+    double maxlat = north;
+    double minlon = west;
+    double maxlon = west + sqbxMeters / metersPerLon;
+
+    mylonScale = displayXPixelCount / ( maxlon - minlon );
+    mylatScale = - displayYPixelCount / ( maxlat - minlat );
 }
