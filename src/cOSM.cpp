@@ -1,6 +1,20 @@
 #include <cmath>
+#define WIN32_LEAN_AND_MEAN
+#include <Windows.h>
+// https://github.com/yhirose/cpp-httplib
+// #define CPPHTTPLIB_OPENSSL_SUPPORT
+#include "httplib.h"
 #include "cPatrolZone.h"
 #include "cOSM.h"
+
+ cOSM::cOSM()
+ {
+    setBBox(
+        45.4,
+        -75.7,
+        45.39,
+        -75.68    );
+ }
 
 void cOSM::set(
     double latOff, double latScale,
@@ -58,6 +72,7 @@ cxy cOSM::latlon2pixel(double lat, double lon)
 
 void cOSM::read(const std::string &fname)
 {
+
     myNode.clear();
     myVWay.clear();
 
@@ -66,11 +81,16 @@ void cOSM::read(const std::string &fname)
         throw std::runtime_error(
             "cOSM cannot open file");
 
+    std::istream ss(ifs.rdbuf());
+    parse( ss );
+}
+
+ void cOSM::parse( std::istream& ss ) {
     int id;
     double lat, lon;
     std::string line;
 
-    while (getline(ifs, line))
+    while (getline(ss, line))
     {
         // std::cout << line << "\n";
         int plat = line.find("\"lat\":");
@@ -101,14 +121,14 @@ void cOSM::read(const std::string &fname)
     }
 
     // rewind
-    ifs.clear();
-    ifs.seekg(0);
+    ss.clear();
+    ss.seekg(0);
 
     // read the ways
     std::vector<int> vNodeID;
     bool fway = false;
     bool fnodes = false;
-    while (getline(ifs, line))
+    while (getline(ss, line))
     {
         if (!fway)
         {
@@ -166,8 +186,8 @@ void cOSM::calculateBBox()
             south edge of box is least lat value
 
             becomes y pixel location
-            but mist be multiplied by a -ve
-            becuase y pixel value runs from north to south
+            but must be multiplied by a -ve
+            because y pixel value runs from north to south
 
         longitude
             runs from west to east
@@ -200,9 +220,8 @@ void cOSM::calculateBBox()
     }
 
     calcOffsetScale(
-        north, west, south, east    );
+        north, west, south, east);
 
- 
     cxy pnw = latlon2pixel(north, west);
     std::cout << "North West " << pnw.x << " " << pnw.y << "\n";
     // std::cout <<"South East ";
@@ -282,22 +301,22 @@ cOSM::getNode(const int id) const
 }
 double
 cOSM::Haversine(
-    std::pair<double,double> from,
-    std::pair<double,double> to )
+    std::pair<double, double> from,
+    std::pair<double, double> to)
 {
     // http://blog.julien.cayzac.name/2008/10/arc-and-distance-between-two-points-on.html
 
     const double DEG_TO_RAD = 0.017453292519943295769236907684886;
     const double EARTH_RADIUS_IN_METERS = 6372797.560856;
 
-    double latitudeArc  = (from.first - to.first) * DEG_TO_RAD;
+    double latitudeArc = (from.first - to.first) * DEG_TO_RAD;
     double longitudeArc = (from.second - to.second) * DEG_TO_RAD;
     double latitudeH = sin(latitudeArc * 0.5);
     latitudeH *= latitudeH;
     double lontitudeH = sin(longitudeArc * 0.5);
     lontitudeH *= lontitudeH;
-    double tmp = cos(from.first*DEG_TO_RAD) * cos(to.first*DEG_TO_RAD);
-    return EARTH_RADIUS_IN_METERS * 2.0 * asin(sqrt(latitudeH + tmp*lontitudeH));
+    double tmp = cos(from.first * DEG_TO_RAD) * cos(to.first * DEG_TO_RAD);
+    return EARTH_RADIUS_IN_METERS * 2.0 * asin(sqrt(latitudeH + tmp * lontitudeH));
 }
 
 void cOSM::calcOffsetScale(
@@ -313,21 +332,86 @@ void cOSM::calcOffsetScale(
     mylonOff = -west;
 
     double osmbbxHeightMeters = Haversine(
-        std::make_pair( north, west ),
-        std::make_pair( south, west )    );
+        std::make_pair(north, west),
+        std::make_pair(south, west));
     double osmbbxWidthMeters = Haversine(
-        std::make_pair( north, west ),
-        std::make_pair( north, east )    );
+        std::make_pair(north, west),
+        std::make_pair(north, east));
     double sqbxMeters = osmbbxHeightMeters;
-    if( sqbxMeters > osmbbxWidthMeters )
+    if (sqbxMeters > osmbbxWidthMeters)
         sqbxMeters = osmbbxWidthMeters;
-    double metersPerLat = osmbbxHeightMeters / ( north-south);
-    double metersPerLon = osmbbxWidthMeters / ( east - west);
+    double metersPerLat = osmbbxHeightMeters / (north - south);
+    double metersPerLon = osmbbxWidthMeters / (east - west);
     double minlat = north - sqbxMeters / metersPerLat;
     double maxlat = north;
     double minlon = west;
     double maxlon = west + sqbxMeters / metersPerLon;
 
-    mylonScale = displayXPixelCount / ( maxlon - minlon );
-    mylatScale = - displayYPixelCount / ( maxlat - minlat );
+    mylonScale = displayXPixelCount / (maxlon - minlon);
+    mylatScale = -displayYPixelCount / (maxlat - minlat);
+}
+
+void cOSM::download()
+{
+
+// https://github.com/yhirose/cpp-httplib
+
+    httplib::Client cli("http://overpass-api.de");
+
+    std::string query = 
+        std::string("/api/interpreter/?data=<osm-script output=\"json\">")
+        + "<query type=\"way\">" 
+        + makeOverpassBBox()
+        + "<has-kv k=\"highway\" regv=\"primary|secondary|tertiary|residential\"/>"
+        + "</query>" 
+        + "<union><item />"
+        + "<recurse type=\"way-node\"/>"
+        + "</union><print/></osm-script>";
+    std::cout << "Query: " << query << "\n";
+
+    auto res = cli.Get(query);
+
+    std::cout << "status " << res->status << "\n"
+              << "downloaded " << res->body.length() << std::endl;
+
+    std::ofstream ofs("../dat/osm_download.txt");
+    if( ! ofs.is_open() )
+        throw std::runtime_error(
+            "osm download file not open"        );
+    ofs << res->body;
+
+    std::istringstream ss(res->body.c_str());
+    parse( ss );
+
+
+}
+
+void cOSM::setBBox(
+    double NorthLat,
+    double WestLon,
+    double SouthLat,
+    double EastLon)
+{
+    myNorthLat = NorthLat;
+    myWestLon = WestLon;
+    mySouthLat = SouthLat;
+    myEastLon = EastLon;
+}
+    void cOSM::getBBox(
+        double &NorthLat,
+        double &WestLon,
+        double &SouthLat,
+        double &EastLon) const
+        {
+               NorthLat = myNorthLat;
+    WestLon = myWestLon;
+    SouthLat = mySouthLat;
+    EastLon = myEastLon; 
+        }
+
+std::string cOSM::makeOverpassBBox()
+{
+    std::string q = "<bbox-query s=\"" + std::to_string(mySouthLat) + "\" w=\"" + std::to_string(myWestLon) + "\" n=\"" + std::to_string(myNorthLat) + "\" e=\"" + std::to_string(myEastLon) + "\"/>";
+    std::cout << q << "\n";
+    return q;
 }

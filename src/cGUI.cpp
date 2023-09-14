@@ -29,11 +29,27 @@ void cGUI::ConstructMenu()
 {
     wex::menubar mbar(fm);
     wex::menu mfile(fm);
-    mfile.append("Calculate",
+    mfile.append("Open Street Map Download file",
+                   [&](const std::string &title)
+                   {
+                       try
+                       {
+                           wex::filebox fb(fm);
+                           myOSMfile = fb.open();
+                           myOSM.read(myOSMfile);
+                           Calculate();
+                       }
+                       catch (std::runtime_error &e)
+                       {
+                           wex::msgbox m(e.what());
+                       }
+                   });
+    mfile.append("Download Open Street Map",
                  [&](const std::string &title)
                  {
                      try
                      {
+                         myOSM.download();
                          Calculate();
                      }
                      catch (std::runtime_error &e)
@@ -45,23 +61,34 @@ void cGUI::ConstructMenu()
     mbar.append("Calculate", mfile);
 
     wex::menu mConfig(fm);
-    mConfig.append("Open Street Map Download file",
-        [&](const std::string &title)
-        {
-            wex::filebox fb(fm);
-            myOSMfile = fb.open();
-        });
+    mConfig.append("Open Street Map Download Bounding Box",
+                   [&](const std::string &title)
+                   {
+                       double north, west, south, east;
+                       myOSM.getBBox(north, west, south, east);
+                       wex::inputbox ib;
+                       ib.labelWidth(70);
+                       ib.add("North Lat", std::to_string(north));
+                       ib.add("West Lon", std::to_string(west));
+                       ib.add("South Lat", std::to_string(south));
+                       ib.add("East Lon", std::to_string(east));
+                       ib.showModal();
+                       myOSM.setBBox(
+                           atof(ib.value("North Lat").c_str()),
+                           atof(ib.value("West Lon").c_str()),
+                           atof(ib.value("South Lat").c_str()),
+                           atof(ib.value("East Lon").c_str()));
+                   });
 
     mbar.append("Config", mConfig);
 }
 
 void cGUI::Calculate()
 {
-    myOSM.read(myOSMfile);
     myOSM.calculateBBox();
     myOSM.calculatePixel();
 
-    myZ.generateCrimeRandom(100, 0, 100, 0, 100);
+    myZ.generateCrimeRandom(100, 5, 95, 5, 95);
     myZ.generateRoad();
 
     myZ.AHC(10);
@@ -141,8 +168,8 @@ void cGUI::drawOSM(wex::shapes &S)
             prev = px;
         }
         // display the way name
-        // S.text(
-        //     w.myName,
-        //     {(int)prev.x, (int)prev.y});
+        S.text(
+            w.myName,
+            {(int)prev.x, (int)prev.y});
     }
 }

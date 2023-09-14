@@ -85,12 +85,45 @@ public:
 class cOSM
 {
 public:
+    cOSM();
+
     void set(
         double latOff, double latScale,
         double lonOff, double lonScale);
     void get(
         double &latOff, double &latScale,
         double &lonOff, double &lonScale) const;
+
+    /** @brief Set bounding box for download from OSM
+    /// @param NorthLat
+    /// @param WestLon
+    /// @param SouthLat
+    /// @param EastLon
+
+        lattitude
+            runs from south to north
+            +ve in northern hemispehere
+
+            north edge of box is greatest lat value
+            south edge of box is least lat value
+
+        longitude
+            runs from west to east
+            -ve in North America
+
+            west edge of box is least ( most -ve ) value
+            east edge of box is greatest value
+    */
+    void setBBox(
+        double NorthLat,
+        double WestLon,
+        double SouthLat,
+        double EastLon);
+    void getBBox(
+        double &NorthLat,
+        double &WestLon,
+        double &SouthLat,
+        double &EastLon) const;
 
     /// @brief read Open Street Map data downloaded to file
     /// @param fname
@@ -120,7 +153,12 @@ public:
     // closest point on way to specified point
     cxy closestOnWay(const cxy &point);
 
+    void download();
+
 private:
+    // bounding box for OSM download
+    double myNorthLat, myWestLon, mySouthLat, myEastLon;
+
     // nodes mapped by index number
     std::map<int, cNodeOSM> myNode;
 
@@ -133,6 +171,8 @@ private:
     // pixel scale
     double mylatScale, mylonScale;
 
+    void parse( std::istream& ss );
+
     bool pixelSanity(const cxy &p);
 
     // Distance between two points ( lat, lon ) in meters
@@ -143,4 +183,6 @@ private:
 
     void calcOffsetScale(
         double north, double west, double south, double east);
+
+    std::string makeOverpassBBox();
 };

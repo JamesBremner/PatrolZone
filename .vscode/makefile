@@ -7,7 +7,8 @@ INCS = -I./include \
 	-I../raven-set \
 
 LIBS = \
-	-lgdiplus -lgdi32 -lcomdlg32 -lstdc++fs -lComctl32 \
+	-lgdiplus -lgdi32 -lcomdlg32 -lstdc++fs -lComctl32   \
+	-lws2_32
 
 
 static_link_flags = -static-libstdc++ -static-libgcc -static
