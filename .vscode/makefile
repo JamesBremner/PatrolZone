@@ -2,13 +2,13 @@
 VPATH = ./src ../raven-set
 
 	# compiler include search paths
-INCS = -I./include \
+INCS = -I. \
 	-I../windex/include \
 	-I../raven-set \
 
 LIBS = \
 	-lgdiplus -lgdi32 -lcomdlg32 -lstdc++fs -lComctl32   \
-	-lws2_32
+	-lcrypt32 -lssl -lcrypto -lws2_32
 
 
 static_link_flags = -static-libstdc++ -static-libgcc -static
@@ -25,6 +25,7 @@ OBJ_starter = \
 	$(ODIR)/cPatrolZone.o \
 	$(ODIR)/cGUI.o \
 	$(ODIR)/cOSM.o \
+	$(ODIR)/cOSMOverpass.o \
 	$(ODIR)/cxy.o \
 
 ### COMPILE
@@ -41,4 +42,6 @@ starter: $(OBJ_starter)
 .PHONY: clean
 clean:
 	del /q .vscode\\obj\\*.o
+
+rebuild: clean starter
 

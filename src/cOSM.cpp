@@ -1,20 +1,17 @@
 #include <cmath>
-#define WIN32_LEAN_AND_MEAN
-#include <Windows.h>
-// https://github.com/yhirose/cpp-httplib
-// #define CPPHTTPLIB_OPENSSL_SUPPORT
-#include "httplib.h"
 #include "cPatrolZone.h"
 #include "cOSM.h"
+#include "cOSMOverpass.h"
 
- cOSM::cOSM()
- {
+cOSM::cOSM()
+{
     setBBox(
         45.4,
         -75.7,
         45.39,
-        -75.68    );
- }
+        -75.68);
+    mydownloadFname = "osm_download.txt";
+}
 
 void cOSM::set(
     double latOff, double latScale,
@@ -82,10 +79,11 @@ void cOSM::read(const std::string &fname)
             "cOSM cannot open file");
 
     std::istream ss(ifs.rdbuf());
-    parse( ss );
+    parse(ss);
 }
 
- void cOSM::parse( std::istream& ss ) {
+void cOSM::parse(std::istream &ss)
+{
     int id;
     double lat, lon;
     std::string line;
@@ -351,41 +349,6 @@ void cOSM::calcOffsetScale(
     mylatScale = -displayYPixelCount / (maxlat - minlat);
 }
 
-void cOSM::download()
-{
-
-// https://github.com/yhirose/cpp-httplib
-
-    httplib::Client cli("http://overpass-api.de");
-
-    std::string query = 
-        std::string("/api/interpreter/?data=<osm-script output=\"json\">")
-        + "<query type=\"way\">" 
-        + makeOverpassBBox()
-        + "<has-kv k=\"highway\" regv=\"primary|secondary|tertiary|residential\"/>"
-        + "</query>" 
-        + "<union><item />"
-        + "<recurse type=\"way-node\"/>"
-        + "</union><print/></osm-script>";
-    std::cout << "Query: " << query << "\n";
-
-    auto res = cli.Get(query);
-
-    std::cout << "status " << res->status << "\n"
-              << "downloaded " << res->body.length() << std::endl;
-
-    std::ofstream ofs("../dat/osm_download.txt");
-    if( ! ofs.is_open() )
-        throw std::runtime_error(
-            "osm download file not open"        );
-    ofs << res->body;
-
-    std::istringstream ss(res->body.c_str());
-    parse( ss );
-
-
-}
-
 void cOSM::setBBox(
     double NorthLat,
     double WestLon,
@@ -397,21 +360,40 @@ void cOSM::setBBox(
     mySouthLat = SouthLat;
     myEastLon = EastLon;
 }
-    void cOSM::getBBox(
-        double &NorthLat,
-        double &WestLon,
-        double &SouthLat,
-        double &EastLon) const
-        {
-               NorthLat = myNorthLat;
+void cOSM::getBBox(
+    double &NorthLat,
+    double &WestLon,
+    double &SouthLat,
+    double &EastLon) const
+{
+    NorthLat = myNorthLat;
     WestLon = myWestLon;
     SouthLat = mySouthLat;
-    EastLon = myEastLon; 
-        }
+    EastLon = myEastLon;
+}
 
-std::string cOSM::makeOverpassBBox()
+void cOSM::download()
 {
-    std::string q = "<bbox-query s=\"" + std::to_string(mySouthLat) + "\" w=\"" + std::to_string(myWestLon) + "\" n=\"" + std::to_string(myNorthLat) + "\" e=\"" + std::to_string(myEastLon) + "\"/>";
-    std::cout << q << "\n";
-    return q;
+    cOSMOverpass wrapper;
+    wrapper.setBBox(
+        myNorthLat,
+        myWestLon,
+        mySouthLat,
+        myEastLon);
+    wrapper.doQuery();
+
+    std::cout << "Query: " << wrapper.getQuery() << "\n";
+    std::cout << "Status: " << wrapper.getStatus() 
+        << "\n downloaded " << wrapper.getDownload().length() << "\n";
+
+    if (!mydownloadFname.empty())
+    {
+        std::ofstream ofs(mydownloadFname);
+        if (!ofs.is_open())
+            throw std::runtime_error(
+                "osm download file not open");
+        ofs << wrapper.getDownload();
+    }
+    std::istringstream ss(wrapper.getDownload().c_str());
+    parse(ss);
 }

@@ -159,6 +159,8 @@ private:
     // bounding box for OSM download
     double myNorthLat, myWestLon, mySouthLat, myEastLon;
 
+    std::string mydownloadFname;
+
     // nodes mapped by index number
     std::map<int, cNodeOSM> myNode;
 
