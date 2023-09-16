@@ -25,7 +25,6 @@ OBJ_starter = \
 	$(ODIR)/cPatrolZone.o \
 	$(ODIR)/cGUI.o \
 	$(ODIR)/cOSM.o \
-	$(ODIR)/cOSMOverpass.o \
 	$(ODIR)/cxy.o \
 
 ### COMPILE
